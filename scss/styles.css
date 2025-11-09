@@ -221,6 +221,28 @@ a {
   color: inherit;
 }
 
+.container {
+  width: 1125px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+button {
+  font-family: "RF-Dewi-Expanded", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+  display: block;
+  border: 0;
+  border-radius: 16px;
+  background-color: #f4df74;
+  width: 265px;
+  height: 64px;
+  margin: 54px auto 0px auto;
+  z-index: 2;
+}
+
 .header {
   position: relative;
   background-image: url("/images/header.jpg");
@@ -239,12 +261,6 @@ a {
   background-color: #110000;
   opacity: 0.6;
   z-index: 1;
-}
-.header .container {
-  width: 1125px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
 }
 .header .contact-info {
   display: flex;
@@ -287,18 +303,4 @@ a {
 }
 .header__title span {
   display: block;
-}
-.header__button {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  font-size: 16px;
-  text-align: center;
-  position: relative;
-  display: block;
-  border: 0;
-  border-radius: 16px;
-  background-color: #f4df74;
-  width: 265px;
-  height: 64px;
-  margin: 54px auto 0px auto;
-  z-index: 2;
 }/*# sourceMappingURL=styles.css.map */
