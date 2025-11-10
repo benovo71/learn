@@ -245,11 +245,19 @@ button {
 
 h2 {
   font-family: "RF-Dewi-Expanded", sans-serif;
-  line-height: 110%;
+  line-height: 1.1;
   margin-top: 120px;
   margin-bottom: 50px;
   font-size: 48px;
   text-align: center;
+}
+
+h3 {
+  font-family: "RF-Dewi-Expanded", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.2;
 }
 
 .header {
@@ -346,6 +354,51 @@ h2 {
 .catalog__categories img {
   width: 100%;
   height: 350px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
+}
+
+.presentation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  background-image: url("/images/presentation.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  color: #ffffff;
+}
+.presentation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #110000;
+  opacity: 0.6;
+  border-radius: inherit;
+}
+.presentation__title_white {
+  margin-top: 80px;
+  margin-bottom: 37px;
+  color: #ffffff;
+  z-index: 1;
+}
+.presentation__title_white span {
+  display: block;
+}
+.presentation__video-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 70px;
+  cursor: pointer;
+}
+.presentation__treangle {
+  position: absolute;
+  z-index: 1;
 }/*# sourceMappingURL=styles.css.map */

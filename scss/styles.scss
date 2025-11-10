@@ -98,16 +98,15 @@
       display: block;
       font-size: 24px;
 
-      span {    
-        position:absolute;        
-        margin-left: 15px;    
+      span {
+        position: absolute;
+        margin-left: 15px;
         font-size: 18px;
 
-        &::after{    
-        content:' ₽';
-    }
-    }
-
+        &::after {
+          content: " ₽";
+        }
+      }
     }
   }
 
@@ -115,5 +114,56 @@
     width: 100%;
     height: 350px;
     object-fit: cover;
+  }
+}
+
+.presentation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  background-image: url("/images/presentation.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  color: $color-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #110000;
+    opacity: 0.6;
+    border-radius: inherit;
+  }
+
+  &__title_white {
+    margin-top: 80px;
+    margin-bottom: 37px;
+    color: $color-white;
+    z-index: 1;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__video-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 70px;
+    cursor: pointer;
+  }
+
+  &__treangle {
+    position: absolute;
+    z-index: 1;
   }
 }
