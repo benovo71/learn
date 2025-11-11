@@ -247,7 +247,7 @@ h2 {
   font-family: "RF-Dewi-Expanded", sans-serif;
   line-height: 1.1;
   margin-top: 120px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   font-size: 48px;
   text-align: center;
 }
@@ -255,6 +255,14 @@ h2 {
 h3 {
   font-family: "RF-Dewi-Expanded", sans-serif;
   font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.2;
+}
+
+h4 {
+  font-family: "RF-Dewi-Expanded", sans-serif;
+  font-size: 20px;
   font-weight: 800;
   text-align: center;
   line-height: 1.2;
@@ -354,7 +362,8 @@ h3 {
 .catalog__categories img {
   width: 100%;
   height: 350px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .presentation {
@@ -401,4 +410,101 @@ h3 {
 .presentation__treangle {
   position: absolute;
   z-index: 1;
+}
+
+.production {
+  margin-top: -175px;
+  padding-bottom: 131px;
+  padding-top: 175px;
+  background-color: #EEEEEE;
+}
+.production .production__title span {
+  display: block;
+}
+.production__description {
+  width: 738px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.production__services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+}
+.production .production__service-title {
+  margin-top: 34px;
+  margin-bottom: 25px;
+}
+.production .production__service-title span {
+  display: block;
+}
+.production .production__service-description {
+  text-align: center;
+}
+
+.methods {
+  padding-bottom: 320px;
+}
+
+.methods__title span {
+  display: block;
+}
+
+.methods__services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 37px;
+}
+.methods__services .methods__silkscreen img {
+  height: 316px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.methods__services .methods__silkscreen .methods__title {
+  margin-top: 40px;
+  margin-bottom: 23px;
+}
+.methods__services .methods__silkscreen .methods__description {
+  text-align: center;
+}
+.methods__services .methods__printing img {
+  height: 316px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.methods__services .methods__printing .methods__title {
+  margin-top: 40px;
+  margin-bottom: 23px;
+}
+.methods__services .methods__printing .methods__description {
+  text-align: center;
+}
+
+.partner {
+  background-color: #1A1A1A;
+  border-radius: 15px;
+}
+.partner__background {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.partner__background img {
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-radius: 15px;
+}
+.partner__title_white {
+  color: #ffffff;
+  margin-bottom: 26px;
+}
+.partner__description_white {
+  color: #ffffff;
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */
