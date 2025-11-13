@@ -199,7 +199,7 @@ svg * {
 }
 @font-face {
   font-family: "RF-Dewi-regular";
-  src: url("/fonts/rf-dewi-regular.woff2") format("woff2");
+  src: url("/fonts/RFDewi-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -287,33 +287,6 @@ h4 {
   opacity: 0.6;
   z-index: 1;
 }
-.header .contact-info {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 133px;
-  color: #ffffff;
-}
-.header .contact-info__number {
-  display: block;
-  font-family: "RF-Dewi-Expanded", sans-serif;
-}
-.header .contact-info__company {
-  text-align: center;
-  text-transform: uppercase;
-}
-.header .contact-info__name {
-  display: block;
-  font-size: 25px;
-  font-family: "RF-Dewi-Expanded", sans-serif;
-}
-.header .contact-info__description {
-  font-family: "RF-Dewi-regular", sans-serif;
-}
-.header .contact-info__email {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  display: block;
-  text-transform: uppercase;
-}
 .header__title {
   position: relative;
   font-family: "RF-Dewi-Expanded", sans-serif;
@@ -322,7 +295,7 @@ h4 {
   line-height: 120%;
   font-size: 60px;
   display: block;
-  margin: 0 auto;
+  margin: 133px auto 0px auto;
   text-align: center;
   z-index: 2;
 }
@@ -412,16 +385,16 @@ h4 {
   z-index: 1;
 }
 
-.production {
+.cooperation {
   margin-top: -175px;
   padding-bottom: 131px;
   padding-top: 175px;
   background-color: #EEEEEE;
 }
-.production .production__title span {
+.cooperation .cooperation__title span {
   display: block;
 }
-.production__description {
+.cooperation__description {
   width: 738px;
   text-align: center;
   margin-top: 0;
@@ -429,24 +402,24 @@ h4 {
   margin-left: auto;
   margin-right: auto;
 }
-.production__services {
+.cooperation__services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 34px;
 }
-.production .production__service-title {
+.cooperation .cooperation__service-title {
   margin-top: 34px;
   margin-bottom: 25px;
 }
-.production .production__service-title span {
+.cooperation .cooperation__service-title span {
   display: block;
 }
-.production .production__service-description {
+.cooperation .cooperation__service-description {
   text-align: center;
 }
 
 .methods {
-  padding-bottom: 320px;
+  padding-bottom: 135px;
 }
 
 .methods__title span {
@@ -486,12 +459,15 @@ h4 {
 }
 
 .partner {
+  position: relative;
   background-color: #1A1A1A;
   border-radius: 15px;
+  margin-bottom: -170px;
 }
 .partner__background {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  position: relative;
 }
 .partner__background img {
   height: 350px;
@@ -500,11 +476,212 @@ h4 {
   width: 100%;
   border-radius: 15px;
 }
+.partner__background::after {
+  content: "";
+  position: absolute;
+  background-color: #1A1A1A;
+  height: 100%;
+  width: 100%;
+  border-radius: 16px;
+  opacity: 0.6;
+}
+.partner__info {
+  position: absolute;
+  top: 96px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .partner__title_white {
+  margin: 0 auto;
+  width: 632px;
   color: #ffffff;
   margin-bottom: 26px;
 }
 .partner__description_white {
+  width: 620px;
+  margin: 0 auto;
   color: #ffffff;
   text-align: center;
+}
+
+.work {
+  padding-top: 298px;
+  padding-bottom: 200px;
+  background-color: #1A1A1A;
+}
+.work__title {
+  margin-top: 0px;
+  color: #ffffff;
+  margin-bottom: 36px;
+}
+.work__description {
+  margin: 0 auto;
+  margin-bottom: 68px;
+  width: 660px;
+  color: #ffffff;
+  text-align: center;
+}
+.work__icons {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.work__icons .work__icon .work__circle {
+  width: 114px;
+  height: 114px;
+  background-color: #222222;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  margin: 0 auto 42px auto;
+}
+.work__icons .work__icon .work__circle .work__svg {
+  margin: auto;
+}
+.work__icons .work__icon-description {
+  width: 160px;
+  color: #ffffff;
+}
+
+.production {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 130px;
+}
+.production__title {
+  width: 1175px;
+}
+.production__description {
+  width: 610px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+.production__photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+.production__photos .production__photo {
+  border-radius: 4px;
+}
+
+.shops {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #EEEEEE;
+  border-radius: 14px 14px 20px 20px;
+  margin-bottom: -764px;
+}
+.shops__title {
+  width: 821px;
+  margin-bottom: 34px;
+}
+.shops__title span {
+  display: block;
+}
+.shops__description {
+  width: 530px;
+  margin-bottom: 60px;
+}
+.shops__adress-container .shops__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.shops__adress-container .shops__gallery .shops__section-1 img {
+  width: 100%;
+  height: 472px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0px 0px 0px 14px;
+}
+.shops__adress-container .shops__gallery .shops__section-2 img {
+  width: 100%;
+  height: 472px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0px 0px 14px 0px;
+}
+
+.partners {
+  padding-top: 764px;
+  padding-bottom: 80px;
+  background-color: #1A1A1A;
+}
+.partners__title {
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+.partners__description {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.partners__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+.partners__gallery img {
+  height: 350px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: #ffffff;
+}
+.contact-info__number {
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
+  font-family: "RF-Dewi-Expanded", sans-serif;
+}
+.contact-info__company {
+  text-align: center;
+  text-transform: uppercase;
+}
+.contact-info__name {
+  display: block;
+  font-size: 25px;
+  font-family: "RF-Dewi-Expanded", sans-serif;
+}
+.contact-info__description {
+  font-family: "RF-Dewi-regular", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.contact-info__mail {
+  display: flex;
+  flex-direction: column;
+  justify-self: end;
+}
+.contact-info__email {
+  font-family: "RF-Dewi-Expanded", sans-serif;
+  display: block;
+  text-transform: uppercase;
+}
+
+footer {
+  background-color: #1A1A1A;
+}
+footer .container {
+  padding-top: 60px;
+  padding-bottom: 34px;
+  border-top: 1px solid #2C2C2C;
+}
+footer .container .contact-info__description {
+  text-transform: capitalize;
+}
+footer .container .footer__button {
+  margin-top: 48px;
 }/*# sourceMappingURL=styles.css.map */

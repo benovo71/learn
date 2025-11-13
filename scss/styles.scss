@@ -23,39 +23,6 @@
     z-index: 1;
   }
 
-  .contact-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 133px;
-    color: $color-white;
-
-    &__number {
-      display: block;
-      font-family: "RF-Dewi-Expanded", sans-serif;
-    }
-
-    &__company {
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    &__name {
-      display: block;
-      font-size: 25px;
-      font-family: "RF-Dewi-Expanded", sans-serif;
-    }
-
-    &__description {
-      font-family: "RF-Dewi-regular", sans-serif;
-    }
-
-    &__email {
-      font-family: "RF-Dewi-Expanded", sans-serif;
-      display: block;
-      text-transform: uppercase;
-    }
-  }
-
   &__title {
     position: relative;
     font-family: "RF-Dewi-Expanded", sans-serif;
@@ -64,7 +31,7 @@
     line-height: 120%;
     font-size: 60px;
     display: block;
-    margin: 0 auto;
+    margin: 133px auto 0px auto;
     text-align: center;
     z-index: 2;
   }
@@ -168,13 +135,13 @@
   }
 }
 
-.production {
+.cooperation {
   margin-top: -175px;
   padding-bottom: 131px;
   padding-top: 175px;
   background-color: $color-grey;
 
-  .production__title span {
+  .cooperation__title span {
     display: block;
   }
 
@@ -195,7 +162,7 @@
     gap: 34px;
   }
 
-  .production__service-title {
+  .cooperation__service-title {
     margin-top: 34px;
     margin-bottom: 25px;
 
@@ -203,13 +170,13 @@
       display: block;
     }
   }
-  .production__service-description {
+  .cooperation__service-description {
     text-align: center;
   }
 }
 
 .methods {
-  padding-bottom: 320px;
+  padding-bottom: 135px;
 }
 
 .methods__title span {
@@ -254,13 +221,15 @@
 }
 
 .partner {
+  position: relative;
   background-color: $color-dark;
   border-radius: 15px;
-  
+  margin-bottom: -170px;
 
   &__background {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    position: relative;
 
     img {
       height: 350px;
@@ -270,13 +239,246 @@
     }
   }
 
+  &__background::after {
+    content: "";
+    position: absolute;
+    background-color: $color-dark;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+    opacity: 0.6;
+  }
+
+  &__info {
+    position: absolute;
+    top: 96px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   &__title_white {
+    margin: 0 auto;
+    width: 632px;
     color: $color-white;
     margin-bottom: 26px;
   }
 
   &__description_white {
+    width: 620px;
+    margin: 0 auto;
     color: $color-white;
     text-align: center;
+  }
+}
+
+.work {
+  padding-top: 298px;
+  padding-bottom: 200px;
+  background-color: $color-dark;
+
+  &__title {
+    margin-top: 0px;
+    color: $color-white;
+    margin-bottom: 36px;
+  }
+
+  &__description {
+    margin: 0 auto;
+    margin-bottom: 68px;
+    width: 660px;
+    color: $color-white;
+    text-align: center;
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+    .work__icon {
+      .work__circle {
+        width: 114px;
+        height: 114px;
+        background-color: #222222;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        margin: 0 auto 42px auto;
+
+        .work__svg {
+          margin: auto;
+        }
+      }
+
+      &-description {
+        width: 160px;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.production {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 130px;
+
+  &__title {
+    width: 1175px;
+  }
+
+  &__description {
+    width: 610px;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  &__photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+
+    .production__photo {
+      border-radius: 4px;
+    }
+  }
+}
+
+.shops {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: $color-grey;
+  border-radius: 14px 14px 20px 20px;
+  margin-bottom: -764px;
+
+  &__title {
+    width: 821px;
+    margin-bottom: 34px;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__description {
+    width: 530px;
+    margin-bottom: 60px;
+  }
+
+  &__adress-container {
+    .shops__gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .shops__section-1 img {
+        width: 100%;
+        height: 472px;
+        object-fit: cover;
+        border-radius: 0px 0px 0px 14px;
+      }
+
+      .shops__section-2 img {
+        width: 100%;
+        height: 472px;
+        object-fit: cover;
+        border-radius: 0px 0px 14px 0px;
+      }
+    }
+  }
+}
+
+.partners {
+  padding-top: 764px;
+  padding-bottom: 80px;
+  background-color: $color-dark;
+
+  &__title {
+    color: $color-white;
+    margin-bottom: 40px;
+  }
+  &__description {
+    color: $color-white;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+
+    img {
+      height: 350px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: $color-white;
+
+  &__number {
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    
+    font-family: "RF-Dewi-Expanded", sans-serif;
+  }
+
+  &__company {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__name {
+    display: block;
+    font-size: 25px;
+    font-family: "RF-Dewi-Expanded", sans-serif;
+  }
+
+  &__description {
+    font-family: "RF-Dewi-regular", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  &__mail {
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+  }
+
+  &__email {
+    font-family: "RF-Dewi-Expanded", sans-serif;
+    display: block;
+    text-transform: uppercase;
+  }
+}
+
+footer {
+  background-color: $color-dark;
+
+  .container {
+    padding-top: 60px;
+    padding-bottom: 34px;
+    border-top: 1px solid $color-line;
+
+    .contact-info__description {
+      text-transform: capitalize;
+    }
+
+    .footer__button {
+      margin-top: 48px;
+    }
   }
 }
