@@ -229,6 +229,7 @@ a {
 }
 
 button {
+  grid-area: button;
   font-family: "RF-Dewi-Expanded", sans-serif;
   font-size: 16px;
   text-align: center;
@@ -241,6 +242,14 @@ button {
   height: 64px;
   margin: 54px auto 0px auto;
   z-index: 2;
+}
+
+h1 {
+  font-family: "RF-Dewi-Expanded", sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+  font-size: 60px;
+  text-align: center;
 }
 
 h2 {
@@ -268,13 +277,94 @@ h4 {
   line-height: 1.2;
 }
 
-.header {
+header {
   position: relative;
   background-image: url("/images/header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 30px;
   padding-bottom: 213px;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-areas: "phone   company   mail" "title   title     title" "button  button    button";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  color: #ffffff;
+}
+.contact-info__phone {
+  grid-area: phone;
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
+}
+.contact-info__number {
+  font-family: "RF-Dewi-Expanded", sans-serif;
+}
+.contact-info__company {
+  grid-area: company;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-transform: uppercase;
+}
+.contact-info__name {
+  font-size: 25px;
+  font-family: "RF-Dewi-Expanded", sans-serif;
+}
+.contact-info__description {
+  font-family: "RF-Dewi-regular", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.contact-info__mail {
+  grid-area: mail;
+  display: flex;
+  flex-direction: column;
+  justify-self: end;
+}
+.contact-info__email {
+  font-family: "RF-Dewi-Expanded", sans-serif;
+  display: block;
+  text-transform: uppercase;
+}
+.contact-info .header__title {
+  grid-area: title;
+  position: relative;
+  color: #ffffff;
+  margin-top: 133px;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding-bottom: 33px;
+  }
+  .container {
+    width: 560px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  button {
+    width: 221px;
+    height: 54px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .contact-info {
+    display: grid;
+    grid-template-areas: "company company company" "title   title   title" "button  button  button" "phone   .       mail";
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contact-info .header__button {
+    margin-bottom: 169px;
+  }
 }
 .header::before {
   content: "";
@@ -286,18 +376,6 @@ h4 {
   background-color: #110000;
   opacity: 0.6;
   z-index: 1;
-}
-.header__title {
-  position: relative;
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  font-weight: 800;
-  color: #ffffff;
-  line-height: 120%;
-  font-size: 60px;
-  display: block;
-  margin: 133px auto 0px auto;
-  text-align: center;
-  z-index: 2;
 }
 .header__title span {
   display: block;
@@ -633,44 +711,6 @@ h4 {
   border-radius: 4px;
 }
 
-.contact-info {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  color: #ffffff;
-}
-.contact-info__number {
-  display: flex;
-  flex-direction: column;
-  justify-self: start;
-  font-family: "RF-Dewi-Expanded", sans-serif;
-}
-.contact-info__company {
-  text-align: center;
-  text-transform: uppercase;
-}
-.contact-info__name {
-  display: block;
-  font-size: 25px;
-  font-family: "RF-Dewi-Expanded", sans-serif;
-}
-.contact-info__description {
-  font-family: "RF-Dewi-regular", sans-serif;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 1.5;
-  font-weight: 400;
-}
-.contact-info__mail {
-  display: flex;
-  flex-direction: column;
-  justify-self: end;
-}
-.contact-info__email {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  display: block;
-  text-transform: uppercase;
-}
-
 footer {
   background-color: #1A1A1A;
 }
@@ -684,4 +724,10 @@ footer .container .contact-info__description {
 }
 footer .container .footer__button {
   margin-top: 48px;
+}
+
+@media (max-width: 600px) {
+  .catalog__categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -16,6 +16,7 @@ a {
 }
 
 button {
+  grid-area: button;
   font-family: "RF-Dewi-Expanded", sans-serif;
   font-size: 16px;
   text-align: center;
@@ -28,6 +29,14 @@ button {
   height: 64px;
   margin: 54px auto 0px auto;
   z-index: 2;
+}
+
+h1 {
+  font-family: "RF-Dewi-Expanded", sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+  font-size: 60px;
+  text-align: center;
 }
 
 h2 {
@@ -53,4 +62,123 @@ h4 {
   font-weight: 800;
   text-align: center;
   line-height: 1.2;
+}
+
+header {  
+  position: relative;
+  background-image: url("/images/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 30px;
+  padding-bottom: 213px;  
+}
+
+.contact-info {
+  display: grid;
+  grid-template-areas:
+
+  "phone   company   mail"
+  "title   title     title"
+  "button  button    button";
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  color: $color-white;
+
+  &__phone {
+    grid-area: phone;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;    
+  }
+
+  &__number {
+      font-family: "RF-Dewi-Expanded", sans-serif;
+    }
+
+  &__company {
+    grid-area: company;
+    display: flex;
+    flex-direction: column;    
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__name {    
+    font-size: 25px;
+    font-family: "RF-Dewi-Expanded", sans-serif;
+  }
+
+  &__description {
+    font-family: "RF-Dewi-regular", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  &__mail {
+    grid-area: mail;
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+  }
+
+  &__email {
+    font-family: "RF-Dewi-Expanded", sans-serif;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  .header__title {
+    grid-area: title;
+    position: relative;
+    color: $color-white;
+    margin-top: 133px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  header {
+    padding-bottom: 33px;
+
+  }
+  .container {
+    width: 560px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+
+  button {
+    width: 221px;
+    height: 54px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  
+.contact-info {
+  display: grid;
+  grid-template-areas:
+
+  "company company company"
+  "title   title   title"
+  "button  button  button"
+  "phone   .       mail";
+
+  grid-template-columns: repeat(3, 1fr);
+
+
+  .header__button {
+    margin-bottom: 169px;
+  }
+}
 }

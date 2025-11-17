@@ -4,12 +4,6 @@
 @import "basic";
 
 .header {
-  position: relative;
-  background-image: url("/images/header.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 30px;
-  padding-bottom: 213px;
 
   &::before {
     content: "";
@@ -21,20 +15,7 @@
     background-color: #110000;
     opacity: 0.6;
     z-index: 1;
-  }
-
-  &__title {
-    position: relative;
-    font-family: "RF-Dewi-Expanded", sans-serif;
-    font-weight: 800;
-    color: $color-white;
-    line-height: 120%;
-    font-size: 60px;
-    display: block;
-    margin: 133px auto 0px auto;
-    text-align: center;
-    z-index: 2;
-  }
+  } 
 
   &__title span {
     display: block;
@@ -420,50 +401,7 @@
   }
 }
 
-.contact-info {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  color: $color-white;
 
-  &__number {
-    display: flex;
-    flex-direction: column;
-    justify-self: start;
-
-    font-family: "RF-Dewi-Expanded", sans-serif;
-  }
-
-  &__company {
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  &__name {
-    display: block;
-    font-size: 25px;
-    font-family: "RF-Dewi-Expanded", sans-serif;
-  }
-
-  &__description {
-    font-family: "RF-Dewi-regular", sans-serif;
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: 1.5;
-    font-weight: 400;
-  }
-
-  &__mail {
-    display: flex;
-    flex-direction: column;
-    justify-self: end;
-  }
-
-  &__email {
-    font-family: "RF-Dewi-Expanded", sans-serif;
-    display: block;
-    text-transform: uppercase;
-  }
-}
 
 footer {
   background-color: $color-dark;
@@ -480,5 +418,11 @@ footer {
     .footer__button {
       margin-top: 48px;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .catalog__categories {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
