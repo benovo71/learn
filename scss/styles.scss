@@ -4,7 +4,6 @@
 @import "basic";
 
 .header {
-
   &::before {
     content: "";
     position: absolute;
@@ -15,7 +14,7 @@
     background-color: #110000;
     opacity: 0.6;
     z-index: 1;
-  } 
+  }
 
   &__title span {
     display: block;
@@ -127,7 +126,8 @@
   }
 
   &__description {
-    width: 738px;
+    width: 100%;
+    max-width: 738px;
     text-align: center;
     margin: {
       top: 0;
@@ -239,13 +239,13 @@
 
   &__title_white {
     margin: 0 auto;
-    width: 632px;
+    max-width: 632px;
     color: $color-white;
     margin-bottom: 26px;
   }
 
   &__description_white {
-    width: 620px;
+    max-width: 620px;
     margin: 0 auto;
     color: $color-white;
     text-align: center;
@@ -254,7 +254,7 @@
 
 .work {
   padding-top: 298px;
-  padding-bottom: 200px;
+  padding-bottom: 149px;
   background-color: $color-dark;
 
   &__title {
@@ -266,7 +266,7 @@
   &__description {
     margin: 0 auto;
     margin-bottom: 68px;
-    width: 660px;
+    max-width: 660px;
     color: $color-white;
     text-align: center;
   }
@@ -275,6 +275,7 @@
     display: flex;
     justify-content: space-around;
     text-align: center;
+    flex-wrap: wrap;
 
     .work__icon {
       .work__circle {
@@ -307,11 +308,11 @@
   padding-bottom: 130px;
 
   &__title {
-    width: 1175px;
+    max-width: 1175px;
   }
 
   &__description {
-    width: 610px;
+    max-width: 610px;
     text-align: center;
     margin-bottom: 80px;
   }
@@ -323,6 +324,8 @@
 
     .production__photo {
       border-radius: 4px;
+
+      object-fit: cover;
     }
   }
 }
@@ -337,7 +340,7 @@
   margin-bottom: -764px;
 
   &__title {
-    width: 821px;
+    max-width: 821px;
     margin-bottom: 34px;
 
     span {
@@ -346,7 +349,7 @@
   }
 
   &__description {
-    width: 530px;
+    max-width: 530px;
     margin-bottom: 60px;
   }
 
@@ -401,8 +404,6 @@
   }
 }
 
-
-
 footer {
   background-color: $color-dark;
 
@@ -424,5 +425,44 @@ footer {
 @media (max-width: 600px) {
   .catalog__categories {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .cooperation__services {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .methods__services {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .partner__info {
+    width: 100%;
+    max-width: 462px;
+  }
+
+  .work__icon {
+    width: 50%;
+    margin-bottom: 61px;
+  }
+
+  .work__icon-description {
+    width: 100%;
+    min-width: 200px;
+    margin-inline: auto;
+  }
+
+  .production__photos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .catalog__item {
+    a {
+      span {
+        font-size: 14px;
+      }
+    }
   }
 }
