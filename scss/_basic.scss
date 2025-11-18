@@ -1,6 +1,13 @@
+
+* {
+  outline: 1px solid red !important;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-size: 14px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 a {
@@ -12,8 +19,6 @@ a {
   width: 100%;
   max-width: 1125px;
   margin-inline: auto;
-  padding-left: 40px;
-  padding-right: 40px;
   position: relative;
   z-index: 2;
 }
@@ -30,6 +35,8 @@ button {
   background-color: $color-yellow;
   max-width: 265px;
   height: 64px;
+  padding-left: 36px;
+  padding-right: 36px;
   margin: 54px auto 0px auto;
   z-index: 2;
 }
@@ -92,7 +99,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-self: start;
-    white-space: nowrap;
   }
 
   &__number {
@@ -141,22 +147,25 @@ header {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 715px) {
   header {
     padding-bottom: 33px;
   }
+
+  
   .container {
     width: 100%;
     max-width: 560px;
-    padding-left: 15px;
-    padding-right: 15px;
     margin-inline: auto;
   }
 
   button {
     width: 100%;
-    max-width: 221px;
-    height: 54px;
+    height: auto;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-top: 17px;
+    padding-bottom:17px;
   }
 
   h1 {
@@ -175,7 +184,15 @@ header {
       "button  button  button"
       "phone   .       mail";
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    &__company {
+
+    }
+
+    .header__title {
+
+    }
 
     .header__button {
       margin-bottom: 169px;
