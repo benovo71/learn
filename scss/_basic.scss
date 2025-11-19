@@ -1,8 +1,3 @@
-
-* {
-  outline: 1px solid red !important;
-}
-
 body {
   font-family: "Inter", sans-serif;
   font-size: 14px;
@@ -76,7 +71,7 @@ h4 {
 
 header {
   position: relative;
-  background-image: url("/images/header.jpg");
+  background-image: url("images/header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 30px;
@@ -152,7 +147,6 @@ header {
     padding-bottom: 33px;
   }
 
-  
   .container {
     width: 100%;
     max-width: 560px;
@@ -165,7 +159,7 @@ header {
     padding-left: 36px;
     padding-right: 36px;
     padding-top: 17px;
-    padding-bottom:17px;
+    padding-bottom: 17px;
   }
 
   h1 {
@@ -186,16 +180,30 @@ header {
 
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 
-    &__company {
-
-    }
-
-    .header__title {
-
-    }
-
     .header__button {
       margin-bottom: 169px;
     }
+  }
+
+  .contact-info__footer {
+    display: grid;
+    grid-template-areas:
+      "company company company"
+      "title title title"
+      "phone phone phone"
+      "mail mail mail"
+      "button button button";
+
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: auto;
+  }
+
+  .contact-info__phone {
+    margin-top: 40px;
+  }
+
+  .contact-info__mail {
+    margin-top: 40px;
+    justify-self: start;
   }
 }
