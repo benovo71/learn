@@ -32,8 +32,11 @@ button {
   height: 64px;
   padding-left: 36px;
   padding-right: 36px;
-  margin: 54px auto 0px auto;
+  margin: 0 auto;
   z-index: 2;
+}
+
+.button_yellow {
 }
 
 h1 {
@@ -69,13 +72,11 @@ h4 {
   line-height: 1.2;
 }
 
-header {
-  position: relative;
-  background-image: url("/images/header.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 30px;
-  padding-bottom: 213px;
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .contact-info {
@@ -134,7 +135,7 @@ header {
     text-transform: uppercase;
   }
 
-  .header__title {
+  .hero__title {
     grid-area: title;
     position: relative;
     color: $color-white;
@@ -179,10 +180,6 @@ header {
       "phone   .       mail";
 
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-
-    .header__button {
-      margin-bottom: 169px;
-    }
   }
 
   .contact-info__footer {

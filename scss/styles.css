@@ -192,21 +192,21 @@ svg * {
 }
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter-Regular.woff2") format("woff2");
+  src: url("../fonts/Inter-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "RF-Dewi-regular";
-  src: url("/fonts/RFDewi-Regular.woff2") format("woff2");
+  src: url("../fonts/RFDewi-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "RF-Dewi-Expanded";
-  src: url("/fonts/rf-dewi-expanded-bold.woff2") format("woff2");
+  src: url("../fonts/rf-dewi-expanded-bold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -245,7 +245,7 @@ button {
   height: 64px;
   padding-left: 36px;
   padding-right: 36px;
-  margin: 54px auto 0px auto;
+  margin: 0 auto;
   z-index: 2;
 }
 
@@ -282,13 +282,11 @@ h4 {
   line-height: 1.2;
 }
 
-header {
-  position: relative;
-  background-image: url("/images/header.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 30px;
-  padding-bottom: 213px;
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .contact-info {
@@ -336,7 +334,7 @@ header {
   display: block;
   text-transform: uppercase;
 }
-.contact-info .header__title {
+.contact-info .hero__title {
   grid-area: title;
   position: relative;
   color: #ffffff;
@@ -371,9 +369,6 @@ header {
     grid-template-areas: "company company company" "title   title   title" "button  button  button" "phone   .       mail";
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
-  .contact-info .header__button {
-    margin-bottom: 169px;
-  }
   .contact-info__footer {
     display: grid;
     grid-template-areas: "company company company" "title title title" "phone phone phone" "mail mail mail" "button button button";
@@ -388,7 +383,32 @@ header {
     justify-self: start;
   }
 }
-.header::before {
+.hero__title span {
+  display: block;
+}
+
+.catalog__title_black span {
+  display: block;
+}
+
+.hero {
+  position: relative;
+  padding-top: 214px;
+  padding-bottom: 213px;
+}
+.hero__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: 0;
+}
+.hero::before {
   content: "";
   position: absolute;
   top: 0;
@@ -399,12 +419,11 @@ header {
   opacity: 0.6;
   z-index: 1;
 }
-.header__title span {
-  display: block;
-}
-
-.catalog__title_black span {
-  display: block;
+.hero__title {
+  position: relative;
+  color: #ffffff;
+  margin-bottom: 44px;
+  z-index: 2;
 }
 
 .catalog__description {
@@ -422,6 +441,7 @@ header {
   margin-top: 21px;
   display: block;
   font-size: 24px;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .catalog__categories .catalog__item a span {
@@ -434,7 +454,8 @@ header {
 }
 .catalog__categories img {
   aspect-ratio: 1;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .presentation {
@@ -533,7 +554,8 @@ header {
 .methods__services .methods__silkscreen img {
   height: 316px;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .methods__services .methods__silkscreen .methods__title {
   margin-top: 40px;
@@ -545,7 +567,8 @@ header {
 .methods__services .methods__printing img {
   height: 316px;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .methods__services .methods__printing .methods__title {
   margin-top: 40px;
@@ -568,7 +591,8 @@ header {
 }
 .partner__background img {
   height: 350px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   border-radius: 15px;
 }
@@ -663,7 +687,8 @@ header {
 .production__photos .production__photo {
   border-radius: 4px;
   aspect-ratio: 1;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .shops {
@@ -693,13 +718,15 @@ header {
 .shops__adress-container .shops__gallery .shops__section-1 img {
   width: 100%;
   height: 472px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 0px 0px 0px 14px;
 }
 .shops__adress-container .shops__gallery .shops__section-2 img {
   width: 100%;
   height: 472px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 0px 0px 14px 0px;
 }
 
@@ -725,7 +752,8 @@ header {
 .partners__gallery img {
   aspect-ratio: 1;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 4px;
 }
 

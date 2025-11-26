@@ -3,7 +3,32 @@
 @import "variables";
 @import "basic";
 
-.header {
+.hero__title span {
+  display: block;
+}
+
+.catalog__title_black {
+  span {
+    display: block;
+  }
+}
+
+.hero {
+  position: relative;
+  padding-top: 214px;
+  padding-bottom: 213px;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -16,14 +41,11 @@
     z-index: 1;
   }
 
-  &__title span {
-    display: block;
-  }
-}
-
-.catalog__title_black {
-  span {
-    display: block;
+  &__title {
+    position: relative;
+    color: $color-white;
+    margin-bottom: 44px;
+    z-index: 2;
   }
 }
 
@@ -39,7 +61,6 @@
   margin-bottom: 106px;
 
   .catalog__item {
-
     a {
       margin-top: 21px;
       display: block;
