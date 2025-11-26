@@ -1,0 +1,34 @@
+@media (max-width: 430px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .contact-info {
+    display: grid;
+    grid-template-areas:
+      "company company company"
+      "title title title"
+      "button button button"
+      "phone phone phone"
+      "mail  mail mail";
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .contact-info__phone {
+    margin-top: 30px;
+  }
+
+  .contact-info__mail {
+    margin-top: 30px;
+    justify-self: flex-start;
+  }
+
+  .catalog__categories .catalog__item a {
+    font-size: 14px;
+  }
+
+  .catalog__categories .catalog__item .catalog__item-price {
+    vertical-align: top;
+    font-size: 10px;
+  }
+}

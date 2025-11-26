@@ -1,0 +1,52 @@
+h1 {
+  font-family: "RF-Dewi-Expanded", sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+  font-size: 60px;
+  text-align: center;
+}
+
+h3 {
+  font-family: "RF-Dewi-Expanded", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.2;
+}
+
+h4 {
+  font-family: "RF-Dewi-Expanded", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.hero__title {
+  position: relative;
+  color: #ffffff;
+  margin-top: 133px;
+}
+
+.section__title {
+  font-family: "RF-Dewi-Expanded", sans-serif;
+  font-size: 48px;
+  max-width: 800px;
+  margin: 0px auto 80px;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.section__description {
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto 60px;
+}
+
+.section__title_white {
+  color: #ffffff;
+}
+
+.section__description_white {
+  color: #ffffff;
+}/*# sourceMappingURL=titles.css.map */

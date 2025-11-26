@@ -2,6 +2,9 @@
 @import "fonts";
 @import "variables";
 @import "basic";
+@import "titles";
+@import "media(715)";
+@import "media(430)";
 
 .hero__title span {
   display: block;
@@ -47,11 +50,6 @@
     margin-bottom: 44px;
     z-index: 2;
   }
-}
-
-.catalog__description {
-  text-align: center;
-  margin-bottom: 80px;
 }
 
 .catalog__categories {
@@ -146,18 +144,6 @@
     display: block;
   }
 
-  &__description {
-    width: 100%;
-    max-width: 738px;
-    text-align: center;
-    margin: {
-      top: 0;
-      bottom: 80px;
-      left: auto;
-      right: auto;
-    }
-  }
-
   &__services {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -179,10 +165,6 @@
 
 .methods {
   padding-bottom: 135px;
-}
-
-.methods__title span {
-  display: block;
 }
 
 .methods__services {
@@ -278,20 +260,6 @@
   padding-bottom: 149px;
   background-color: $color-dark;
 
-  &__title {
-    margin-top: 0px;
-    color: $color-white;
-    margin-bottom: 36px;
-  }
-
-  &__description {
-    margin: 0 auto;
-    margin-bottom: 68px;
-    max-width: 660px;
-    color: $color-white;
-    text-align: center;
-  }
-
   &__icons {
     display: flex;
     justify-content: space-around;
@@ -327,17 +295,6 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 130px;
-
-  &__title {
-    max-width: 1175px;
-  }
-
-  &__description {
-    max-width: 610px;
-    text-align: center;
-    margin-bottom: 80px;
-  }
-
   &__photos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -359,20 +316,6 @@
   background-color: $color-grey;
   border-radius: 14px 14px 20px 20px;
   margin-bottom: -764px;
-
-  &__title {
-    max-width: 821px;
-    margin-bottom: 34px;
-
-    span {
-      display: block;
-    }
-  }
-
-  &__description {
-    max-width: 530px;
-    margin-bottom: 60px;
-  }
 
   &__adress-container {
     .shops__gallery {
@@ -400,16 +343,6 @@
   padding-top: 764px;
   padding-bottom: 80px;
   background-color: $color-dark;
-
-  &__title {
-    color: $color-white;
-    margin-bottom: 40px;
-  }
-  &__description {
-    color: $color-white;
-    text-align: center;
-    margin-bottom: 100px;
-  }
 
   &__gallery {
     display: grid;
@@ -440,118 +373,5 @@ footer {
     .footer__button {
       margin-top: 48px;
     }
-  }
-}
-
-@media (max-width: 715px) {
-  .catalog__categories {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-
-    .catalog__item {
-      .catalog__item-price {
-        font-size: 14px;
-      }
-    }
-  }
-
-  .cooperation__services {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto;
-  }
-
-  .methods__services {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto;
-  }
-
-  .partner__info {
-    width: 100%;
-    max-width: 462px;
-  }
-
-  .work__icon {
-    width: 50%;
-    margin-bottom: 61px;
-  }
-
-  .work__icon-description {
-    width: 100%;
-    min-width: 100px;
-    margin-inline: auto;
-  }
-
-  .production__photos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .partners {
-    &__gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 34px;
-    }
-  }
-
-  .partners {
-    .container {
-      .partners__gallery {
-        .partners__item:first-child {
-          display: none;
-        }
-      }
-    }
-  }
-
-  .shops {
-    &__adress-container {
-      .shops__gallery {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-
-        .shops__section-1 img {
-          border-radius: 0px;
-        }
-
-        .shops__section-2 img {
-          border-radius: 0px 0px 14px 14px;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 430px) {
-  h1 {
-    font-size: 20px;
-  }
-
-  .contact-info {
-    display: grid;
-    grid-template-areas:
-      "company company company"
-      "title title title"
-      "button button button"
-      "phone phone phone"
-      "mail  mail mail";
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  }
-
-  .contact-info__phone {
-    margin-top: 30px;
-  }
-
-  .contact-info__mail {
-    margin-top: 30px;
-    justify-self: flex-start;
-  }
-
-  .catalog__categories .catalog__item a {
-    font-size: 14px;
-  }
-
-  .catalog__categories .catalog__item .catalog__item-price {
-    vertical-align: top;
-    font-size: 10px;
   }
 }
