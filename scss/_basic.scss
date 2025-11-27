@@ -21,6 +21,10 @@ body {
   z-index: 2;
 }
 
+.container_no-padding {
+  padding-top: 0px;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -40,7 +44,7 @@ button {
   height: 64px;
   padding-left: 36px;
   padding-right: 36px;
-  margin: 0 auto;
+  margin: 40px auto 0px;
   z-index: 2;
 }
 
@@ -57,18 +61,17 @@ main {
 }
 
 .contact-info {
-  display: grid;
-  grid-template-areas: "phone   company   mail";
-
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
   color: $color-white;
 
   &__phone {
-    grid-area: phone;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
-    justify-self: start;
   }
 
   &__number {
@@ -88,9 +91,9 @@ main {
   }
 
   &__company {
-    grid-area: company;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: center;
     text-transform: uppercase;
   }
@@ -109,10 +112,12 @@ main {
   }
 
   &__mail {
-    grid-area: mail;
+    position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
-    justify-self: end;
+    margin-left: auto;
   }
 
   &__email {

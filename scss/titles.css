@@ -6,11 +6,16 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  font-family: "RF-Dewi-Expanded", sans-serif;
+  font-size: 48px;
+  line-height: 1.1;
+}
+
 h3 {
   font-family: "RF-Dewi-Expanded", sans-serif;
   font-size: 24px;
   font-weight: 800;
-  text-align: center;
   line-height: 1.2;
 }
 
@@ -29,24 +34,24 @@ h4 {
 }
 
 .section__title {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  font-size: 48px;
   max-width: 800px;
-  margin: 0px auto 80px;
+  margin: 0px auto 40px;
   text-align: center;
-  line-height: 1.1;
 }
 
 .section__description {
   max-width: 700px;
   text-align: center;
-  margin: 0 auto 60px;
+  margin: 0 auto 50px;
 }
 
 .section__title_white {
   color: #ffffff;
+  z-index: 1;
 }
 
 .section__description_white {
+  position: relative;
   color: #ffffff;
+  z-index: 2;
 }/*# sourceMappingURL=titles.css.map */
