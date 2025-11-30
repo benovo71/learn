@@ -4,19 +4,6 @@
 @import "basic";
 @import "titles";
 
-* {
-  outline: 1px solid red;
-}
-.hero__title span {
-  display: block;
-}
-
-.catalog__title_black {
-  span {
-    display: block;
-  }
-}
-
 .hero {
   position: relative;
   padding-top: 214px;
@@ -53,36 +40,37 @@
   }
 }
 
-.catalog__categories {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  margin-bottom: 106px;
-
-  .catalog__item {
-    a {
-      margin-top: 21px;
-      display: block;
-      font-size: 24px;
-      width: fit-content;
-
-      span {
-        align-self: flex-start;
-        font-size: 18px;
-        vertical-align: top;
-
-        &::after {
-          content: " ₽";
-        }
-      }
-    }
+.catalog {
+  &__categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 106px;
   }
 
-  & img {
-    aspect-ratio: 1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  &__item {
+    &-price {
+      align-self: flex-start;
+      font-size: 18px;
+      vertical-align: top;
+
+      &::after {
+        content: " ₽";
+      }
+    }
+
+    &-img {
+      aspect-ratio: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.catalog__title_black {
+  span {
+    display: block;
   }
 }
 
@@ -131,67 +119,44 @@
   padding-top: 175px;
   background-color: $color-grey;
 
-  .cooperation__title span {
-    display: block;
-  }
-
   &__services {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 34px;
   }
 
-  .cooperation__service-title {
+  &__service-title {
     margin-top: 34px;
     margin-bottom: 25px;
-
-    span {
-      display: block;
-    }
   }
-  .cooperation__service-description {
+
+  &__service-description {
     text-align: center;
   }
 }
 
 .methods {
   padding-bottom: 135px;
-}
 
-.methods__services {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 37px;
-
-  .methods__silkscreen {
-    img {
-      height: 316px;
-      width: 100%;
-      object-fit: cover;
-    }
-    .methods__title {
-      margin-top: 40px;
-      margin-bottom: 23px;
-    }
-
-    .methods__description {
-      text-align: center;
-    }
+  &__services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 37px;
   }
-  .methods__printing {
-    img {
-      height: 316px;
-      width: 100%;
-      object-fit: cover;
-    }
-    .methods__title {
-      margin-top: 40px;
-      margin-bottom: 23px;
-    }
 
-    .methods__description {
-      text-align: center;
-    }
+  &__img {
+    height: 316px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin-top: 40px;
+    margin-bottom: 23px;
+  }
+
+  &__description {
+    text-align: center;
   }
 }
 
@@ -256,27 +221,25 @@
     justify-content: space-around;
     text-align: center;
     flex-wrap: wrap;
+  }
 
-    .work__icon {
-      .work__circle {
-        width: 114px;
-        height: 114px;
-        background-color: #222222;
-        border-radius: 50%;
-        position: relative;
-        display: flex;
-        margin: 0 auto 42px auto;
+  &__circle {
+    width: 114px;
+    height: 114px;
+    background-color: #222222;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    margin: 0 auto 42px auto;
+  }
 
-        .work__svg {
-          margin: auto;
-        }
-      }
+  &__svg {
+    margin: auto;
+  }
 
-      &-description {
-        max-width: 160px;
-        color: $color-white;
-      }
-    }
+  &__icon-description {
+    max-width: 160px;
+    color: $color-white;
   }
 }
 
@@ -290,14 +253,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 36px;
+  }
 
-    .production__photo {
-      border-radius: 4px;
-      aspect-ratio: 1;
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
+  &__photo {
+    border-radius: 4px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -310,25 +273,22 @@
   border-radius: 14px 14px 20px 20px;
   margin-bottom: -764px;
 
-  &__adress-container {
-    .shops__gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__section-1 img {
+    width: 100%;
+    height: 472px;
+    object-fit: cover;
+    border-radius: 0px 0px 0px 14px;
+  }
 
-      .shops__section-1 img {
-        width: 100%;
-        height: 472px;
-        object-fit: cover;
-        border-radius: 0px 0px 0px 14px;
-      }
-
-      .shops__section-2 img {
-        width: 100%;
-        height: 472px;
-        object-fit: cover;
-        border-radius: 0px 0px 14px 0px;
-      }
-    }
+  &__section-2 img {
+    width: 100%;
+    height: 472px;
+    object-fit: cover;
+    border-radius: 0px 0px 14px 0px;
   }
 }
 
