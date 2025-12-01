@@ -348,7 +348,7 @@ main {
 }
 
 footer {
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   padding-bottom: 34px;
   flex-shrink: 0;
 }
@@ -446,7 +446,7 @@ h4 {
   z-index: 2;
 }
 .hero__button:hover {
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
 }
 
 .catalog__categories {
@@ -468,6 +468,7 @@ h4 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 4px;
 }
 .catalog__item-name {
   font-size: 24px;
@@ -479,11 +480,11 @@ h4 {
 
 .presentation {
   position: relative;
-  top: 173px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-top: 100px;
   padding-bottom: 70px;
   border-radius: 16px;
   color: #ffffff;
@@ -501,44 +502,63 @@ h4 {
   border-radius: inherit;
   z-index: 1;
 }
+.presentation__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  z-index: 0;
+}
+.presentation__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .presentation__video-circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.presentation__video-circle:hover .presentation__play-button {
+  background-color: #ffffff;
+  opacity: 1;
+}
+.presentation__video-circle:hover .presentation__play-icon {
+  border-left: 31px solid #1a1a1a;
 }
 .presentation__play-button {
-  position: absolute;
+  position: relative;
   width: 105px;
   height: 105px;
   background-color: #ffffff;
   opacity: 0.5;
   border-radius: 50%;
-  border: none;
   margin: 0 auto;
-  z-index: 2;
-}
-.presentation__circle:hover {
-  background-color: #1A1A1A;
-  z-index: 2;
-  border-radius: 50%;
+  z-index: 3;
 }
 .presentation__play-icon {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: block;
   width: 0;
   height: 0;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 31px solid white;
-  z-index: 5;
+  border-left: 31px solid #ffffff;
+  z-index: 4;
 }
 
 .cooperation {
   padding-bottom: 131px;
   padding-top: 175px;
-  background-color: #EEEEEE;
+  margin-top: -175px;
+  background-color: #eeeeee;
 }
 .cooperation__services {
   display: grid;
@@ -575,7 +595,7 @@ h4 {
 .partner {
   position: relative;
   top: 160px;
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   border-radius: 15px;
 }
 .partner__background {
@@ -593,7 +613,7 @@ h4 {
 .partner__background::after {
   content: "";
   position: absolute;
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   height: 100%;
   width: 100%;
   border-radius: 16px;
@@ -621,7 +641,7 @@ h4 {
 .work {
   padding-top: 298px;
   padding-bottom: 149px;
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
 }
 .work__icons {
   display: flex;
@@ -672,7 +692,7 @@ h4 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   border-radius: 14px 14px 20px 20px;
 }
 .shops__gallery {
@@ -695,9 +715,9 @@ h4 {
 }
 
 .partners {
-  margin-top: -640px;
-  padding-top: 640px;
-  background-color: #1A1A1A;
+  margin-top: -650px;
+  padding-top: 650px;
+  background-color: #1a1a1a;
 }
 .partners__gallery {
   display: grid;
@@ -713,7 +733,7 @@ h4 {
 }
 
 footer .container {
-  border-top: 1px solid #2C2C2C;
+  border-top: 1px solid #2c2c2c;
 }
 footer .container .contact-info__description {
   text-transform: capitalize;

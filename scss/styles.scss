@@ -67,6 +67,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 4px;
     }
 
     &-name {
@@ -83,11 +84,11 @@
 
 .presentation {
   position: relative;
-  top: 173px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-top: 100px;
   padding-bottom: 70px;
   border-radius: 16px;
   color: $color-white;
@@ -106,47 +107,70 @@
     z-index: 1;
   }
 
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   &__video-circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
     cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__video-circle:hover {
+    .presentation__play-button {
+      background-color: $color-white;
+      opacity: 1;
+    }
+
+    .presentation__play-icon {
+      border-left: 31px solid $color-dark;
+    }
   }
 
   &__play-button {
-    position: absolute;
+    position: relative;
     width: 105px;
     height: 105px;
     background-color: $color-white;
     opacity: 0.5;
     border-radius: 50%;
-    border: none;
     margin: 0 auto;
-    z-index: 2;
-  }
-
-  &__circle:hover {
-    background-color: $color-dark;
-    z-index: 2;
-    border-radius: 50%;
+    z-index: 3;
   }
 
   &__play-icon {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: block;
     width: 0;
     height: 0;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 31px solid white;
-    z-index: 5;
+    border-left: 31px solid $color-white;
+    z-index: 4;
   }
 }
 
 .cooperation {
   padding-bottom: 131px;
   padding-top: 175px;
+  margin-top: -175px;
   background-color: $color-grey;
 
   &__services {
@@ -320,8 +344,8 @@
 }
 
 .partners {
-  margin-top: -640px;
-  padding-top: 640px;
+  margin-top: -650px;
+  padding-top: 650px;
   background-color: $color-dark;
 
   &__gallery {
