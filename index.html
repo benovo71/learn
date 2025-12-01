@@ -14,7 +14,9 @@
           <a class="contact-info__number" href="tel:79253431696"
             >+79253431696</a
           >
-          <button class="contact-info__button">Перезвоните мне</button>
+          <button class="contact-info__button" aria-label="Перезвоните мне">
+            Перезвоните мне
+          </button>
         </div>
         <div class="contact-info__company">
           <span class="contact-info__name">Famfactory</span>
@@ -31,9 +33,16 @@
 
     <main>
       <section class="hero">
-        <img class="hero__img" src="./images/header.webp" />
-        <h1 class="hero__title">Сделано в Сантк-Петербурге</h1>
-        <button class="hero__button">Отправить запрос</button>
+        <img
+          class="hero__img"
+          alt="Изображение фабрики Famfactory"
+          src="/images/header.webp"
+          loading="lazy"
+        />
+        <h1 class="hero__title">Сделано в Санкт-Петербурге</h1>
+        <button class="hero__button" aria-label="Отправить запрос">
+          Отправить запрос
+        </button>
       </section>
 
       <section class="catalog container">
@@ -47,7 +56,11 @@
         <div class="catalog__categories">
           <div class="catalog__item">
             <a class="catalog__item-link" href="#">
-              <img class="catalog__item-img" src="../images/item-1.webp"
+              <img
+                class="catalog__item-img"
+                alt="Фото худи"
+                src="/images/item-1.webp"
+                loading="lazy"
             /></a>
             <a class="catalog__item-name" href="#"
               >Худи <span class="catalog__item-price">от 1650</span></a
@@ -55,7 +68,11 @@
           </div>
           <div class="catalog__item">
             <a class="catalog__item-link" href="#"
-              ><img class="catalog__item-img" src="../images/item-2.webp"
+              ><img
+                class="catalog__item-img"
+                alt="Фото футболок"
+                src="/images/item-2.webp"
+                loading="lazy"
             /></a>
             <a class="catalog__item-name" href="#"
               >Футболки <span class="catalog__item-price">от 510</span></a
@@ -63,7 +80,11 @@
           </div>
           <div class="catalog__item">
             <a class="catalog__item-link" href="#"
-              ><img class="catalog__item-img" src="../images/item-3.webp"
+              ><img
+                class="catalog__item-img"
+                alt="Фото свитшотов"
+                src="/images/item-3.webp"
+                loading="lazy"
             /></a>
             <a class="catalog__item-name" href="#"
               >Свитшоты <span class="catalog__item-price">от 890</span></a
@@ -71,7 +92,11 @@
           </div>
           <div class="catalog__item">
             <a class="catalog__item-link" href="#"
-              ><img class="catalog__item-img" src="images/item-4.webp"
+              ><img
+                class="catalog__item-img"
+                alt="Фото штаны"
+                src="/images/item-4.webp"
+                loading="lazy"
             /></a>
             <a class="catalog__item-name" href="#"
               >Штаны <span class="catalog__item-price">от 1230</span></a
@@ -79,7 +104,11 @@
           </div>
           <div class="catalog__item">
             <a class="catalog__item-link" href="#"
-              ><img class="catalog__item-img" src="images/item-5.webp"
+              ><img
+                class="catalog__item-img"
+                alt="Фото шопперов"
+                src="/images/item-5.webp"
+                loading="lazy"
             /></a>
             <a class="catalog__item-name" href="#"
               >Шопперы <span class="catalog__item-price">от 330</span></a
@@ -87,7 +116,11 @@
           </div>
           <div class="catalog__item">
             <a class="catalog__item-link" href="#"
-              ><img class="catalog__item-img" src="images/item-6.webp"
+              ><img
+                class="catalog__item-img"
+                alt="Фото кепок"
+                src="/images/item-6.webp"
+                loading="lazy"
             /></a>
             <a class="catalog__item-name" href="#"
               >Кепки <span class="catalog__item-price">от 400</span></a
@@ -97,33 +130,19 @@
       </section>
 
       <section class="presentation container">
-        <img class="hero__img" src="/images/presentation.webp" />
+        <img
+          class="hero__img"
+          alt="Фоновое изображение презентации одежды"
+          src="/images/presentation.webp"
+          loading="lazy"
+        />
         <h3 class="section__title section__title_white">
           Презентация нашей коллекции одежды 2021
         </h3>
         <div class="presentation__video-circle">
-          <svg
-            width="105"
-            height="105"
-            viewBox="0 0 105 105"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle opacity="0.2" cx="50" cy="50" r="50" fill="white" />
-          </svg>
-
-          <div class="presentation__treangle">
-            <svg
-              width="31"
-              height="34"
-              viewBox="0 0 31 34"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M29.3 14.2L5 0.3c-0.7-0.4-1.6-0.4-2.2-0.4C0 0 0 1.9 0 2.4v28.4c0 0.4 0 2.4 2.7 2.4 0.7 0 1.6 0.1 2.3-0.3l24.3-13.9c0.1-0.1 0.2-0.1 0.3-0.2 1.5-0.9 1.5-3.4 0-4.3-0.1-0.1-0.2-0.1-0.3-0.2z "
-                fill="white"
-              />
-            </svg>
-          </div>
+          <button class="presentation__play-button" aria-label="Воспроизвести">
+            <span class="presentation__play-icon"></span>
+          </button>
         </div>
       </section>
 
@@ -140,7 +159,11 @@
           </div>
           <div class="cooperation__services">
             <div class="cooperation__lecalo">
-              <img src="images/lecalo.webp" />
+              <img
+                src="/images/lecalo.webp"
+                alt="Фото разработки лекал"
+                loading="lazy"
+              />
               <h4 class="cooperation__service-title">
                 Разработка лекал и дизайна
               </h4>
@@ -151,7 +174,11 @@
               </div>
             </div>
             <div class="cooperation__making">
-              <img src="images/making.webp" />
+              <img
+                src="/images/making.webp"
+                alt="Фото пошива одежды"
+                loading="lazy"
+              />
               <h4 class="cooperation__service-title">Пошив одежды на заказ</h4>
               <div class="cooperation__service-description">
                 Пошив трикотажных изделий любой сложности и в любых объемах, как
@@ -159,7 +186,11 @@
               </div>
             </div>
             <div class="cooperation__brand">
-              <img src="images/brand.webp" />
+              <img
+                src="/images/brand.webp"
+                alt="Фото одежды на заказ"
+                loading="lazy"
+              />
               <h4 class="cooperation__service-title">Бренд одежды под ключ</h4>
               <div class="cooperation__service-description">
                 Поможем разработать линейку одежды для вашего бренда, от пошива
@@ -174,7 +205,12 @@
         <h2 class="section__title">Способы нанесения принтов и вышивка</h2>
         <div class="methods__services">
           <div class="methods__silkscreen">
-            <img class="methods__img" src="images/silkscreen.webp" />
+            <img
+              class="methods__img"
+              alt="Фото шелкографии"
+              src="/images/silkscreen.webp"
+              loading="lazy"
+            />
             <h4 class="methods__title">Шелкография</h4>
             <div class="methods__description">
               Трафаретная печать подходит для нанесения почти на любых изделиях:
@@ -184,7 +220,12 @@
             </div>
           </div>
           <div class="methods__printing">
-            <img class="methods__img" src="images/printing.webp" />
+            <img
+              class="methods__img"
+              alt="Фото вышивки одежды"
+              src="/images/printing.webp"
+              loading="lazy"
+            />
             <h4 class="methods__title">Вышивка на одежде</h4>
             <div class="methods__description">
               Один из самых интересных способов нанесения изображения на одежду.
@@ -198,8 +239,8 @@
 
       <section class="partner container container_no-padding">
         <div class="partner__background">
-          <img src="images/partner 2.webp" />
-          <img src="images/partner 1.webp" />
+          <img src="/images/partner 2.webp" alt="Фото одежды" loading="lazy" />
+          <img src="/images/partner 1.webp" alt="Фото одежды" loading="lazy" />
         </div>
         <div class="partner__info">
           <h3 class="section__title section__title_white">
@@ -225,7 +266,12 @@
           <div class="work__icons">
             <div class="work__icon">
               <div class="work__circle">
-                <img class="work__svg" src="images/work__icon 1.svg" />
+                <img
+                  class="work__svg"
+                  alt="Иконка пользователя"
+                  src="/images/work__icon 1.svg"
+                  loading="lazy"
+                />
               </div>
               <div class="work__icon-description">
                 Отправляете заявку или звоните +7 (911) 109-97-07
@@ -233,7 +279,12 @@
             </div>
             <div class="work__icon">
               <div class="work__circle">
-                <img class="work__svg" src="images/work__icon 2.svg" />
+                <img
+                  class="work__svg"
+                  alt="Иконка футболки"
+                  src="/images/work__icon 2.svg"
+                  loading="lazy"
+                />
               </div>
               <div class="work__icon-description">
                 Разрабатываем лекала и шьём образец
@@ -241,7 +292,12 @@
             </div>
             <div class="work__icon">
               <div class="work__circle">
-                <img class="work__svg" src="images/work__icon 3.svg" />
+                <img
+                  class="work__svg"
+                  alt="Иконка швейной машинки"
+                  src="/images/work__icon 3.svg"
+                  loading="lazy"
+                />
               </div>
               <div class="work__icon-description">
                 Шьём тираж и наносим принт или вышивку
@@ -249,7 +305,12 @@
             </div>
             <div class="work__icon">
               <div class="work__circle">
-                <img class="work__svg" src="images/work__icon 4.svg" />
+                <img
+                  class="work__svg"
+                  alt="Иконка грузовика"
+                  src="/images/work__icon 4.svg"
+                  loading="lazy"
+                />
               </div>
               <div class="work__icon-description">
                 Упаковываем и отгружаем партию
@@ -271,12 +332,42 @@
         </div>
 
         <div class="production__photos">
-          <img class="production__photo" src="images/photo_1.webp" />
-          <img class="production__photo" src="images/photo_2.webp" />
-          <img class="production__photo" src="images/photo_3.webp" />
-          <img class="production__photo" src="images/photo_4.webp" />
-          <img class="production__photo" src="images/photo_5.webp" />
-          <img class="production__photo" src="images/photo_6.webp" />
+          <img
+            class="production__photo"
+            alt="Фото швейного цеха"
+            src="/images/photo_1.webp"
+            loading="lazy"
+          />
+          <img
+            class="production__photo"
+            alt="Фото швейной машинки"
+            src="/images/photo_2.webp"
+            loading="lazy"
+          />
+          <img
+            class="production__photo"
+            alt="Фото везиток"
+            src="/images/photo_3.webp"
+            loading="lazy"
+          />
+          <img
+            class="production__photo"
+            alt="Фото швейной машинке в цехе"
+            src="/images/photo_4.webp"
+            loading="lazy"
+          />
+          <img
+            class="production__photo"
+            alt="Фото работы сотрудника"
+            src="/images/photo_5.webp"
+            loading="lazy"
+          />
+          <img
+            class="production__photo"
+            alt="Фото швейной машинки"
+            src="/images/photo_6.webp"
+            loading="lazy"
+          />
         </div>
       </section>
 
@@ -291,10 +382,18 @@
         <div class="shops__adress-container">
           <div class="shops__gallery">
             <div class="shops__section-1">
-              <img src="images/shops__section-1.webp" />
+              <img
+                src="/images/shops__section-1.webp"
+                alt="Фото магазина 1"
+                loading="lazy"
+              />
             </div>
             <div class="shops__section-2">
-              <img src="images/shops__section-2.webp" />
+              <img
+                src="/images/shops__section-2.webp"
+                alt="Фото магазина 1"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -307,15 +406,60 @@
             С нами уже самые топовые инфлюенсеры.
           </div>
           <div class="partners__gallery">
-            <img class="partners__item" src="images/partners__item-1.webp" />
-            <img class="partners__item" src="images/partners__item-2.webp" />
-            <img class="partners__item" src="images/partners__item-3.webp" />
-            <img class="partners__item" src="images/partners__item-4.webp" />
-            <img class="partners__item" src="images/partners__item-5.webp" />
-            <img class="partners__item" src="images/partners__item-6.webp" />
-            <img class="partners__item" src="images/partners__item-7.webp" />
-            <img class="partners__item" src="images/partners__item-8.webp" />
-            <img class="partners__item" src="images/partners__item-9.webp" />
+            <img
+              class="partners__item"
+              alt="Фото футболки"
+              src="/images/partners__item-1.webp"
+              loading="lazy"
+            />
+            <img
+              class="partners__item"
+              alt="Фото толстовки"
+              src="/images/partners__item-2.webp"
+              loading="lazy"
+            />
+            <img
+              class="partners__item"
+              alt="Фото зеленой толстовки"
+              src="/images/partners__item-3.webp"
+              loading="lazy"
+            />
+            <img
+              class="partners__item"
+              alt="Фото худи"
+              src="/images/partners__item-4.webp"
+              loading="lazy"
+            />
+            <img
+              class="partners__item"
+              alt="Фото черной толстовки"
+              src="/images/partners__item-5.webp"
+              loading="lazy"
+            />
+            <img
+              class="partners__item"
+              alt="Фото черной толстовки"
+              src="/images/partners__item-6.webp"
+              loading="lazy"
+            />
+            <img
+              class="partners__item"
+              alt="Фото черных толстовок"
+              src="/images/partners__item-7.webp"
+              loading="lazy"
+            />
+            <img
+              class="partners__item"
+              alt="Фото оранжевых толстовок"
+              src="/images/partners__item-8.webp"
+              loading="lazy"
+            />
+            <img
+              class="partners__item"
+              alt="Фото разноцветной толстовки"
+              src="/images/partners__item-9.webp"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
@@ -328,7 +472,9 @@
             <a class="contact-info__number" href="tel:79253431696"
               >+7 925 343 16 96</a
             >
-            <button class="contact-info__button">Перезвоните мне</button>
+            <button class="contact-info__button" aria-label="Перезвоните мне">
+              Перезвоните мне
+            </button>
           </div>
           <div class="contact-info__company">
             <span class="contact-info__name">Famfactory</span>
@@ -343,7 +489,9 @@
             <span class="contact-info__email-info">Наша почта</span>
           </div>
         </div>
-        <button class="hero__button">Отправить запрос</button>
+        <button class="hero__button" aria-label="Отправить запрос">
+          Отправить запрос
+        </button>
       </div>
     </footer>
   </body>

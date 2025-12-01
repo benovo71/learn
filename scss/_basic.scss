@@ -34,8 +34,11 @@ a {
   color: inherit;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 button {
-  grid-area: button;
   font-family: "RF-Dewi-Expanded", sans-serif;
   font-size: 16px;
   text-align: center;
@@ -94,6 +97,10 @@ main {
     color: $color-white;
   }
 
+  &__button:hover {
+    text-decoration: underline;
+  }
+
   &__company {
     display: flex;
     flex-direction: column;
@@ -138,5 +145,7 @@ main {
 }
 
 footer {
+  background-color: $color-dark;
+  padding-bottom: 34px;
   flex-shrink: 0;
 }

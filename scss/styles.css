@@ -247,8 +247,11 @@ a {
   color: inherit;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 button {
-  grid-area: button;
   font-family: "RF-Dewi-Expanded", sans-serif;
   font-size: 16px;
   text-align: center;
@@ -304,6 +307,9 @@ main {
   margin: 0px;
   color: #ffffff;
 }
+.contact-info__button:hover {
+  text-decoration: underline;
+}
 .contact-info__company {
   display: flex;
   flex-direction: column;
@@ -342,6 +348,8 @@ main {
 }
 
 footer {
+  background-color: #1A1A1A;
+  padding-bottom: 34px;
   flex-shrink: 0;
 }
 
@@ -437,12 +445,14 @@ h4 {
   color: #ffffff;
   z-index: 2;
 }
+.hero__button:hover {
+  background-color: #EEEEEE;
+}
 
 .catalog__categories {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
-  margin-bottom: 106px;
 }
 .catalog__item-price {
   align-self: flex-start;
@@ -459,6 +469,9 @@ h4 {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.catalog__item-name {
+  font-size: 24px;
+}
 
 .catalog__title_black span {
   display: block;
@@ -466,6 +479,7 @@ h4 {
 
 .presentation {
   position: relative;
+  top: 173px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -493,15 +507,35 @@ h4 {
   justify-content: center;
   position: relative;
   cursor: pointer;
-  z-index: 1;
 }
-.presentation__treangle {
+.presentation__play-button {
   position: absolute;
-  z-index: 1;
+  width: 105px;
+  height: 105px;
+  background-color: #ffffff;
+  opacity: 0.5;
+  border-radius: 50%;
+  border: none;
+  margin: 0 auto;
+  z-index: 2;
+}
+.presentation__circle:hover {
+  background-color: #1A1A1A;
+  z-index: 2;
+  border-radius: 50%;
+}
+.presentation__play-icon {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 31px solid white;
+  z-index: 5;
 }
 
 .cooperation {
-  margin-top: -175px;
   padding-bottom: 131px;
   padding-top: 175px;
   background-color: #EEEEEE;
@@ -519,9 +553,6 @@ h4 {
   text-align: center;
 }
 
-.methods {
-  padding-bottom: 135px;
-}
 .methods__services {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -543,9 +574,9 @@ h4 {
 
 .partner {
   position: relative;
+  top: 160px;
   background-color: #1A1A1A;
   border-radius: 15px;
-  margin-bottom: -170px;
 }
 .partner__background {
   display: grid;
@@ -643,7 +674,6 @@ h4 {
   text-align: center;
   background-color: #EEEEEE;
   border-radius: 14px 14px 20px 20px;
-  margin-bottom: -764px;
 }
 .shops__gallery {
   display: grid;
@@ -665,8 +695,8 @@ h4 {
 }
 
 .partners {
-  padding-top: 764px;
-  padding-bottom: 80px;
+  margin-top: -640px;
+  padding-top: 640px;
   background-color: #1A1A1A;
 }
 .partners__gallery {
@@ -682,19 +712,11 @@ h4 {
   border-radius: 4px;
 }
 
-footer {
-  background-color: #1A1A1A;
-}
 footer .container {
-  padding-top: 60px;
-  padding-bottom: 34px;
   border-top: 1px solid #2C2C2C;
 }
 footer .container .contact-info__description {
   text-transform: capitalize;
-}
-footer .container .footer__button {
-  margin-top: 48px;
 }
 
 @media (max-width: 715px) {
@@ -719,12 +741,6 @@ footer .container .footer__button {
   }
   .contact-info {
     display: flex;
-  }
-  .contact-info__footer {
-    display: grid;
-    grid-template-areas: "company company company" "title title title" "phone phone phone" "mail mail mail" "button button button";
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-template-rows: auto;
   }
   .contact-info__phone {
     margin-top: 40px;

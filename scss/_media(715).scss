@@ -26,19 +26,6 @@
     display: flex;
   }
 
-  .contact-info__footer {
-    display: grid;
-    grid-template-areas:
-      "company company company"
-      "title title title"
-      "phone phone phone"
-      "mail mail mail"
-      "button button button";
-
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-template-rows: auto;
-  }
-
   .contact-info__phone {
     margin-top: 40px;
   }

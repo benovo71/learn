@@ -38,6 +38,10 @@
     color: $color-white;
     z-index: 2;
   }
+
+  &__button:hover {
+    background-color: $color-grey;
+  }
 }
 
 .catalog {
@@ -45,7 +49,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    margin-bottom: 106px;
   }
 
   &__item {
@@ -65,6 +68,10 @@
       height: 100%;
       object-fit: cover;
     }
+
+    &-name {
+      font-size: 24px;
+    }
   }
 }
 
@@ -76,6 +83,7 @@
 
 .presentation {
   position: relative;
+  top: 173px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -104,17 +112,39 @@
     justify-content: center;
     position: relative;
     cursor: pointer;
-    z-index: 1;
   }
 
-  &__treangle {
+  &__play-button {
     position: absolute;
-    z-index: 1;
+    width: 105px;
+    height: 105px;
+    background-color: $color-white;
+    opacity: 0.5;
+    border-radius: 50%;
+    border: none;
+    margin: 0 auto;
+    z-index: 2;
+  }
+
+  &__circle:hover {
+    background-color: $color-dark;
+    z-index: 2;
+    border-radius: 50%;
+  }
+
+  &__play-icon {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 31px solid white;
+    z-index: 5;
   }
 }
 
 .cooperation {
-  margin-top: -175px;
   padding-bottom: 131px;
   padding-top: 175px;
   background-color: $color-grey;
@@ -136,8 +166,6 @@
 }
 
 .methods {
-  padding-bottom: 135px;
-
   &__services {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -162,9 +190,9 @@
 
 .partner {
   position: relative;
+  top: 160px;
   background-color: $color-dark;
   border-radius: 15px;
-  margin-bottom: -170px;
 
   &__background {
     display: grid;
@@ -271,7 +299,6 @@
   text-align: center;
   background-color: $color-grey;
   border-radius: 14px 14px 20px 20px;
-  margin-bottom: -764px;
 
   &__gallery {
     display: grid;
@@ -293,8 +320,8 @@
 }
 
 .partners {
-  padding-top: 764px;
-  padding-bottom: 80px;
+  margin-top: -640px;
+  padding-top: 640px;
   background-color: $color-dark;
 
   &__gallery {
@@ -312,19 +339,11 @@
 }
 
 footer {
-  background-color: $color-dark;
-
   .container {
-    padding-top: 60px;
-    padding-bottom: 34px;
     border-top: 1px solid $color-line;
 
     .contact-info__description {
       text-transform: capitalize;
-    }
-
-    .footer__button {
-      margin-top: 48px;
     }
   }
 }
