@@ -22,8 +22,6 @@ body {
   max-width: 1125px;
   padding-inline: 10px;
   margin-inline: auto;
-  position: relative;
-  z-index: 2;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -83,6 +81,7 @@ main {
   display: flex;
   justify-content: center;
   color: $color-white;
+  z-index: 1;
 
   &__phone {
     position: absolute;
@@ -106,6 +105,11 @@ main {
     padding: 0px;
     margin: 0px;
     color: $color-white;
+    box-shadow: none;
+    transform: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
   }
 
   &__button:hover {

@@ -7,7 +7,7 @@
 .hero {
   position: relative;
   padding-top: 214px;
-  padding-bottom: 213px;
+  padding-bottom: 214px;
 
   &__img {
     position: absolute;
@@ -18,7 +18,7 @@
     border-radius: inherit;
     object-fit: cover;
     object-position: center;
-    z-index: 0;
+    z-index: -2;
   }
 
   &::before {
@@ -30,12 +30,12 @@
     height: 100%;
     background-color: #110000;
     opacity: 0.6;
-    z-index: 1;
+    z-index: -1;
   }
 }
 
 .catalog {
-  &__categories {
+  &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
@@ -69,11 +69,15 @@
 .presentation {
   &__bg {
     position: relative;
-    min-height: 300px;
+    min-height: 350px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 0;
+    overflow: hidden;
+    border-radius: 16px;
   }
 
   &__img {
@@ -83,67 +87,56 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 16px;
-    z-index: 0;
+    z-index: -2;
   }
 
   &__bg::before {
     content: "";
     position: absolute;
     background-color: $color-dark;
-    border-radius: 16px;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     opacity: 0.6;
-    z-index: 1;
-  }
-
-  &__title {
-    z-index: 2;
+    z-index: -1;
   }
 
   &__video-circle {
     cursor: pointer;
-    margin: 0 auto;
-    z-index: 2;
+    margin: 20px auto 0;
   }
 
   &__play-button {
+    position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 105px;
     height: 105px;
-    background-color: $color-white;
-    opacity: 0.5;
+    background-color: $color-dark;
+    opacity: 0.8;
     border-radius: 50%;
-    margin: 0 auto;
-    z-index: 2;
-  }
+    border: 0;
 
-  &__play-icon {
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-left: 31px solid $color-white;
-    z-index: 3;
-  }
-
-  &__video-circle:hover {
-    .presentation__play-button {
-      background-color: $color-white;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-left: 35px solid $color-white;
       opacity: 1;
-      z-index: 2;
+      margin-left: 5px;
     }
+  }
+  &__video-circle:hover &__play-button {
+    opacity: 1;
+    background-color: $color-white;
 
-    .presentation__play-icon {
-      border-left: 31px solid $color-dark;
-      z-index: 2;
+    &::before {
+      border-left-color: $color-dark;
     }
   }
 }
@@ -172,6 +165,7 @@
 
 .methods {
   &__services {
+    margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 37px;
@@ -194,21 +188,21 @@
 }
 
 .partner {
-  position: relative;
-  top: 160px;
-  background-color: $color-dark;
+  position: absolute;
+  width: 100%;
   border-radius: 15px;
+  margin-bottom: 500px;
 
   &__background {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    position: relative;
+    overflow: hidden;
 
     img {
       height: 350px;
       object-fit: cover;
       width: 100%;
-      border-radius: 15px;
     }
   }
 
@@ -218,36 +212,23 @@
     background-color: $color-dark;
     height: 100%;
     width: 100%;
-    border-radius: 16px;
     opacity: 0.6;
   }
 
   &__info {
     position: absolute;
-    top: 96px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-  }
-
-  &__title--white {
-    margin: 0 auto;
-    max-width: 632px;
-    color: $color-white;
-    margin-bottom: 26px;
-  }
-
-  &__description--white {
-    max-width: 620px;
-    margin: 0 auto;
-    color: $color-white;
-    text-align: center;
+    transform: translate(-50%, -50%);
+    z-index: 1;
   }
 }
 
 .work {
-  padding-top: 298px;
-  padding-bottom: 149px;
+  margin-top: 280px;
+  padding-top: 171px;
   background-color: $color-dark;
+  padding-bottom: 130px;
 
   &__icons {
     display: flex;
@@ -281,7 +262,6 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 130px;
   &__photos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -298,12 +278,11 @@
 }
 
 .shops {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: $color-grey;
-  border-radius: 14px 14px 20px 20px;
+  &__bg {
+    background-color: $color-grey;
+    border-radius: 14px 14px 20px 20px;
+    padding-top: 100px;
+  }
 
   &__gallery {
     display: grid;
