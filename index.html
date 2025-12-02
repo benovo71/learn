@@ -9,24 +9,26 @@
 
   <body>
     <header class="header">
-      <div class="contact-info container container_no-padding">
-        <div class="contact-info__phone">
-          <a class="contact-info__number" href="tel:79253431696"
-            >+79253431696</a
-          >
-          <button class="contact-info__button" aria-label="Перезвоните мне">
-            Перезвоните мне
-          </button>
-        </div>
-        <div class="contact-info__company">
-          <span class="contact-info__name">Famfactory</span>
-          <span class="contact-info__description">Швейная фабрика</span>
-        </div>
-        <div class="contact-info__mail">
-          <a class="contact-info__email" href="mailto:mail@famfactory.ru"
-            >Mail@famfactory.ru</a
-          >
-          <span class="contact-info__email-info">Наша почта</span>
+      <div class="container container--full">
+        <div class="contact-info">
+          <div class="contact-info__phone">
+            <a class="contact-info__number" href="tel:79253431696"
+              >+79253431696</a
+            >
+            <button class="contact-info__button" aria-label="Перезвоните мне">
+              Перезвоните мне
+            </button>
+          </div>
+          <div class="contact-info__company">
+            <span class="contact-info__name">Famfactory</span>
+            <span class="contact-info__description">Швейная фабрика</span>
+          </div>
+          <div class="contact-info__mail">
+            <a class="contact-info__email" href="mailto:mail@famfactory.ru"
+              >Mail@famfactory.ru</a
+            >
+            <span class="contact-info__email-info">Наша почта</span>
+          </div>
         </div>
       </div>
     </header>
@@ -35,114 +37,127 @@
       <section class="hero">
         <img
           class="hero__img"
-          alt="Изображение фабрики Famfactory"
+          alt="Famfactory"
           src="/images/header.webp"
           loading="lazy"
         />
-        <h1 class="hero__title">Сделано в Санкт-Петербурге</h1>
-        <button class="hero__button" aria-label="Отправить запрос">
-          Отправить запрос
-        </button>
-      </section>
-
-      <section class="catalog container">
-        <h2 class="section__title">Современный мерчендайз для бизнеса</h2>
-        <div class="section__description">
-          Над реализацией проектов по разработке и производству одежды и
-          аксессураов трудится огромная команда профессионалов, поэтому мы можем
-          создавать проекты любой сложности и масштабов под ключ или воплотить
-          конкретные задачи на любом из этапов производства.
-        </div>
-        <div class="catalog__categories">
-          <div class="catalog__item">
-            <a class="catalog__item-link" href="#">
-              <img
-                class="catalog__item-img"
-                alt="Фото худи"
-                src="/images/item-1.webp"
-                loading="lazy"
-            /></a>
-            <a class="catalog__item-name" href="#"
-              >Худи <span class="catalog__item-price">от 1650</span></a
-            >
-          </div>
-          <div class="catalog__item">
-            <a class="catalog__item-link" href="#"
-              ><img
-                class="catalog__item-img"
-                alt="Фото футболок"
-                src="/images/item-2.webp"
-                loading="lazy"
-            /></a>
-            <a class="catalog__item-name" href="#"
-              >Футболки <span class="catalog__item-price">от 510</span></a
-            >
-          </div>
-          <div class="catalog__item">
-            <a class="catalog__item-link" href="#"
-              ><img
-                class="catalog__item-img"
-                alt="Фото свитшотов"
-                src="/images/item-3.webp"
-                loading="lazy"
-            /></a>
-            <a class="catalog__item-name" href="#"
-              >Свитшоты <span class="catalog__item-price">от 890</span></a
-            >
-          </div>
-          <div class="catalog__item">
-            <a class="catalog__item-link" href="#"
-              ><img
-                class="catalog__item-img"
-                alt="Фото штаны"
-                src="/images/item-4.webp"
-                loading="lazy"
-            /></a>
-            <a class="catalog__item-name" href="#"
-              >Штаны <span class="catalog__item-price">от 1230</span></a
-            >
-          </div>
-          <div class="catalog__item">
-            <a class="catalog__item-link" href="#"
-              ><img
-                class="catalog__item-img"
-                alt="Фото шопперов"
-                src="/images/item-5.webp"
-                loading="lazy"
-            /></a>
-            <a class="catalog__item-name" href="#"
-              >Шопперы <span class="catalog__item-price">от 330</span></a
-            >
-          </div>
-          <div class="catalog__item">
-            <a class="catalog__item-link" href="#"
-              ><img
-                class="catalog__item-img"
-                alt="Фото кепок"
-                src="/images/item-6.webp"
-                loading="lazy"
-            /></a>
-            <a class="catalog__item-name" href="#"
-              >Кепки <span class="catalog__item-price">от 400</span></a
-            >
-          </div>
-        </div>
-      </section>
-
-      <section class="presentation container">
-        <img
-          class="hero__img"
-          alt="Фоновое изображение презентации одежды"
-          src="/images/presentation.webp"
-          loading="lazy"
-        />
-        <h3 class="section__title section__title_white">
-          Презентация нашей коллекции одежды 2021
-        </h3>
-        <div class="presentation__video-circle">
-          <button class="presentation__play-button" aria-label="Воспроизвести">
-            <span class="presentation__play-icon"></span>
+        <div class="container container--full">
+          <h1 class="section__title title--white">
+            Сделано в Санкт-Петербурге
+          </h1>
+          <button class="button button--yellow" aria-label="Отправить запрос">
+            Отправить запрос
           </button>
+        </div>
+      </section>
+
+      <section class="catalog">
+        <div class="container">
+          <h2 class="section__title">Современный мерчендайз для бизнеса</h2>
+          <div class="section__description">
+            Над реализацией проектов по разработке и производству одежды и
+            аксессураов трудится огромная команда профессионалов, поэтому мы
+            можем создавать проекты любой сложности и масштабов под ключ или
+            воплотить конкретные задачи на любом из этапов производства.
+          </div>
+          <div class="catalog__categories">
+            <div class="catalog__item">
+              <a class="catalog__item-link" href="#">
+                <img
+                  class="catalog__item-img"
+                  alt="Фото худи"
+                  src="/images/item-1.webp"
+                  loading="lazy"
+              /></a>
+              <a class="catalog__item-name" href="#"
+                >Худи <span class="catalog__item-price">от 1650</span></a
+              >
+            </div>
+            <div class="catalog__item">
+              <a class="catalog__item-link" href="#"
+                ><img
+                  class="catalog__item-img"
+                  alt="Фото футболок"
+                  src="/images/item-2.webp"
+                  loading="lazy"
+              /></a>
+              <a class="catalog__item-name" href="#"
+                >Футболки <span class="catalog__item-price">от 510</span></a
+              >
+            </div>
+            <div class="catalog__item">
+              <a class="catalog__item-link" href="#"
+                ><img
+                  class="catalog__item-img"
+                  alt="Фото свитшотов"
+                  src="/images/item-3.webp"
+                  loading="lazy"
+              /></a>
+              <a class="catalog__item-name" href="#"
+                >Свитшоты <span class="catalog__item-price">от 890</span></a
+              >
+            </div>
+            <div class="catalog__item">
+              <a class="catalog__item-link" href="#"
+                ><img
+                  class="catalog__item-img"
+                  alt="Фото штаны"
+                  src="/images/item-4.webp"
+                  loading="lazy"
+              /></a>
+              <a class="catalog__item-name" href="#"
+                >Штаны <span class="catalog__item-price">от 1230</span></a
+              >
+            </div>
+            <div class="catalog__item">
+              <a class="catalog__item-link" href="#"
+                ><img
+                  class="catalog__item-img"
+                  alt="Фото шопперов"
+                  src="/images/item-5.webp"
+                  loading="lazy"
+              /></a>
+              <a class="catalog__item-name" href="#"
+                >Шопперы <span class="catalog__item-price">от 330</span></a
+              >
+            </div>
+            <div class="catalog__item">
+              <a class="catalog__item-link" href="#"
+                ><img
+                  class="catalog__item-img"
+                  alt="Фото кепок"
+                  src="/images/item-6.webp"
+                  loading="lazy"
+              /></a>
+              <a class="catalog__item-name" href="#"
+                >Кепки <span class="catalog__item-price">от 400</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="presentation">
+        <div class="container">
+          <div class="presentation__bg">
+            <img
+              class="presentation__img"
+              alt="Фоновое изображение презентации одежды"
+              src="/images/presentation.webp"
+              loading="lazy"
+            />
+            <h3 class="presentation__title title--white">
+              Презентация нашей коллекции одежды 2021
+            </h3>
+            <div class="presentation__video-circle">
+              <button
+                class="presentation__play-button"
+                aria-label="Воспроизвести"
+              >
+                <span class="presentation__play-icon"></span>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -201,65 +216,75 @@
         </div>
       </section>
 
-      <section class="methods container">
-        <h2 class="section__title">Способы нанесения принтов и вышивка</h2>
-        <div class="methods__services">
-          <div class="methods__silkscreen">
-            <img
-              class="methods__img"
-              alt="Фото шелкографии"
-              src="/images/silkscreen.webp"
-              loading="lazy"
-            />
-            <h4 class="methods__title">Шелкография</h4>
-            <div class="methods__description">
-              Трафаретная печать подходит для нанесения почти на любых изделиях:
-              футболках, толстовках, свитшотах и т.д. Принты, сделанные данным
-              способом имеют высокую износостойкость, не требуют особого ухода и
-              прослужат довольно долго.
+      <section class="methods">
+        <div class="container">
+          <h2 class="section__title">Способы нанесения принтов и вышивка</h2>
+          <div class="methods__services">
+            <div class="methods__silkscreen">
+              <img
+                class="methods__img"
+                alt="Фото шелкографии"
+                src="/images/silkscreen.webp"
+                loading="lazy"
+              />
+              <h4 class="methods__title">Шелкография</h4>
+              <div class="methods__description">
+                Трафаретная печать подходит для нанесения почти на любых
+                изделиях: футболках, толстовках, свитшотах и т.д. Принты,
+                сделанные данным способом имеют высокую износостойкость, не
+                требуют особого ухода и прослужат довольно долго.
+              </div>
             </div>
-          </div>
-          <div class="methods__printing">
-            <img
-              class="methods__img"
-              alt="Фото вышивки одежды"
-              src="/images/printing.webp"
-              loading="lazy"
-            />
-            <h4 class="methods__title">Вышивка на одежде</h4>
-            <div class="methods__description">
-              Один из самых интересных способов нанесения изображения на одежду.
-              Вышивка долговечна, без проблем переносит механические
-              воздействия. Данный вид нанесения выглядит наиболее эффектно и
-              прослужит дольше всего.
+            <div class="methods__printing">
+              <img
+                class="methods__img"
+                alt="Фото вышивки одежды"
+                src="/images/printing.webp"
+                loading="lazy"
+              />
+              <h4 class="methods__title">Вышивка на одежде</h4>
+              <div class="methods__description">
+                Один из самых интересных способов нанесения изображения на
+                одежду. Вышивка долговечна, без проблем переносит механические
+                воздействия. Данный вид нанесения выглядит наиболее эффектно и
+                прослужит дольше всего.
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="partner container container_no-padding">
-        <div class="partner__background">
-          <img src="/images/partner 2.webp" alt="Фото одежды" loading="lazy" />
-          <img src="/images/partner 1.webp" alt="Фото одежды" loading="lazy" />
-        </div>
-        <div class="partner__info">
-          <h3 class="section__title section__title_white">
-            Если у вас есть свои товары, мы можем вам помочь реализовать их.
-          </h3>
-          <div class="section__description section__description_white">
-            Разместим Ваши товары на сайте vsrap.com и в офлайн-магазинах
-            «VSRAP». Осуществим обработку заказов и их отправку. Каждое
-            предложение мы рассматриваем индивидуально.
+      <section class="partner">
+        <div class="container container--full">
+          <div class="partner__background">
+            <img
+              src="/images/partner 2.webp"
+              alt="Фото одежды"
+              loading="lazy"
+            />
+            <img
+              src="/images/partner 1.webp"
+              alt="Фото одежды"
+              loading="lazy"
+            />
+          </div>
+          <div class="partner__info">
+            <h3 class="section__title title--white">
+              Если у вас есть свои товары, мы можем вам помочь реализовать их.
+            </h3>
+            <div class="section__description description--white">
+              Разместим Ваши товары на сайте vsrap.com и в офлайн-магазинах
+              «VSRAP». Осуществим обработку заказов и их отправку. Каждое
+              предложение мы рассматриваем индивидуально.
+            </div>
           </div>
         </div>
       </section>
 
       <section class="work">
         <div class="container">
-          <h2 class="section__title section__title_white">
-            Схема работы с нами
-          </h2>
-          <div class="section__description section__description_white">
+          <h2 class="section__title title--white">Схема работы с нами</h2>
+          <div class="section__description description--white">
             К каждому проекту мы подходим индивидуально. Свяжитесь с нами и мы
             поможем реализовать ваши идеи.
           </div>
@@ -320,80 +345,84 @@
         </div>
       </section>
 
-      <section class="production container">
-        <h2 class="section__title">
-          Все вещи мы шьём на собственном производстве в Санкт-Петербурге по
-          собственному дизайну и крою
-        </h2>
-        <div class="section__description">
-          А наши коллекции сделанные совместно с топовыми блогерами и артистами
-          продаём в онлайн и через собственные розничные магазины в Питере и
-          Москве.
-        </div>
+      <section class="production">
+        <div class="container">
+          <h2 class="section__title">
+            Все вещи мы шьём на собственном производстве в Санкт-Петербурге по
+            собственному дизайну и крою
+          </h2>
+          <div class="section__description">
+            А наши коллекции сделанные совместно с топовыми блогерами и
+            артистами продаём в онлайн и через собственные розничные магазины в
+            Питере и Москве.
+          </div>
 
-        <div class="production__photos">
-          <img
-            class="production__photo"
-            alt="Фото швейного цеха"
-            src="/images/photo_1.webp"
-            loading="lazy"
-          />
-          <img
-            class="production__photo"
-            alt="Фото швейной машинки"
-            src="/images/photo_2.webp"
-            loading="lazy"
-          />
-          <img
-            class="production__photo"
-            alt="Фото везиток"
-            src="/images/photo_3.webp"
-            loading="lazy"
-          />
-          <img
-            class="production__photo"
-            alt="Фото швейной машинке в цехе"
-            src="/images/photo_4.webp"
-            loading="lazy"
-          />
-          <img
-            class="production__photo"
-            alt="Фото работы сотрудника"
-            src="/images/photo_5.webp"
-            loading="lazy"
-          />
-          <img
-            class="production__photo"
-            alt="Фото швейной машинки"
-            src="/images/photo_6.webp"
-            loading="lazy"
-          />
+          <div class="production__photos">
+            <img
+              class="production__photo"
+              alt="Фото швейного цеха"
+              src="/images/photo_1.webp"
+              loading="lazy"
+            />
+            <img
+              class="production__photo"
+              alt="Фото швейной машинки"
+              src="/images/photo_2.webp"
+              loading="lazy"
+            />
+            <img
+              class="production__photo"
+              alt="Фото везиток"
+              src="/images/photo_3.webp"
+              loading="lazy"
+            />
+            <img
+              class="production__photo"
+              alt="Фото швейной машинке в цехе"
+              src="/images/photo_4.webp"
+              loading="lazy"
+            />
+            <img
+              class="production__photo"
+              alt="Фото работы сотрудника"
+              src="/images/photo_5.webp"
+              loading="lazy"
+            />
+            <img
+              class="production__photo"
+              alt="Фото швейной машинки"
+              src="/images/photo_6.webp"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 
-      <section class="shops container">
-        <h2 class="section__title">
-          Магазины в самом в центре Питера и Москвы
-        </h2>
-        <div class="section__description">
-          Мы можем организовать реализацию вашего товара, не только в онлайне,
-          но и в наших розничных магазинах.
-        </div>
-        <div class="shops__adress-container">
-          <div class="shops__gallery">
-            <div class="shops__section-1">
-              <img
-                src="/images/shops__section-1.webp"
-                alt="Фото магазина 1"
-                loading="lazy"
-              />
-            </div>
-            <div class="shops__section-2">
-              <img
-                src="/images/shops__section-2.webp"
-                alt="Фото магазина 1"
-                loading="lazy"
-              />
+      <section class="shops">
+        <div class="container">
+          <h2 class="section__title">
+            Магазины в самом в центре Питера и Москвы
+          </h2>
+          <div class="section__description">
+            Мы можем организовать реализацию вашего товара, не только в онлайне,
+            но и в наших розничных магазинах.
+          </div>
+          <div class="shops__adress-container">
+            <div class="shops__gallery">
+              <div class="shops__section-1">
+                <img
+                  src="/images/shops__section-1.webp"
+                  alt="Фото магазина 1"
+                  loading="lazy"
+                />
+              </div>
+              <div class="shops__section-2">
+                <img
+                  src="/images/shops__section-2.webp"
+                  alt="Фото магазина 1"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -401,8 +430,8 @@
 
       <section class="partners">
         <div class="container">
-          <h2 class="section__title section__title_white">Наши коллаборации</h2>
-          <div class="section__description section__description_white">
+          <h2 class="section__title title--white">Наши коллаборации</h2>
+          <div class="section__description description--white">
             С нами уже самые топовые инфлюенсеры.
           </div>
           <div class="partners__gallery">
@@ -489,7 +518,7 @@
             <span class="contact-info__email-info">Наша почта</span>
           </div>
         </div>
-        <button class="hero__button" aria-label="Отправить запрос">
+        <button class="button button--yellow" aria-label="Отправить запрос">
           Отправить запрос
         </button>
       </div>

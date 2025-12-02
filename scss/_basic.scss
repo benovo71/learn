@@ -7,9 +7,9 @@ html {
 }
 
 body {
+  font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
-  font-family: "Inter", sans-serif;
   font-size: 14px;
   overflow-x: hidden;
   width: 100%;
@@ -18,15 +18,19 @@ body {
 
 .container {
   padding-top: 100px;
-  width: 95%;
+  width: 100%;
   max-width: 1125px;
+  padding-inline: 10px;
   margin-inline: auto;
   position: relative;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.container_no-padding {
-  padding-top: 0px;
+.container--full {
+  padding: 0px;
 }
 
 a {
@@ -38,7 +42,7 @@ a:hover {
   text-decoration: underline;
 }
 
-button {
+.button {
   font-family: "RF-Dewi-Expanded", sans-serif;
   font-size: 16px;
   text-align: center;
@@ -46,13 +50,20 @@ button {
   display: block;
   border: 0;
   border-radius: 16px;
-  background-color: $color-yellow;
   max-width: 265px;
   height: 64px;
   padding-left: 36px;
   padding-right: 36px;
   margin: 40px auto 0px;
-  z-index: 2;
+  cursor: pointer;
+}
+
+.button--yellow {
+  background-color: $color-yellow;
+}
+
+.button--yellow:hover {
+  background-color: $color-grey;
 }
 
 .header {
@@ -135,12 +146,6 @@ main {
     font-family: "RF-Dewi-Expanded", sans-serif;
     display: block;
     text-transform: uppercase;
-  }
-
-  .hero__title {
-    position: relative;
-    color: $color-white;
-    margin-top: 133px;
   }
 }
 

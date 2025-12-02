@@ -32,16 +32,6 @@
     opacity: 0.6;
     z-index: 1;
   }
-
-  &__title {
-    position: relative;
-    color: $color-white;
-    z-index: 2;
-  }
-
-  &__button:hover {
-    background-color: $color-grey;
-  }
 }
 
 .catalog {
@@ -76,94 +66,85 @@
   }
 }
 
-.catalog__title_black {
-  span {
-    display: block;
-  }
-}
-
 .presentation {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 100px;
-  padding-bottom: 70px;
-  border-radius: 16px;
-  color: $color-white;
-  z-index: 0;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #110000;
-    opacity: 0.6;
-    border-radius: inherit;
-    z-index: 1;
-  }
-
   &__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
-    overflow: hidden;
-    z-index: 0;
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 16px;
+    z-index: 0;
+  }
+
+  &__bg::before {
+    content: "";
+    position: absolute;
+    background-color: $color-dark;
+    border-radius: 16px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    z-index: 1;
+  }
+
+  &__title {
+    z-index: 2;
   }
 
   &__video-circle {
     cursor: pointer;
-    position: relative;
+    margin: 0 auto;
     z-index: 2;
   }
 
-  &__video-circle:hover {
-    .presentation__play-button {
-      background-color: $color-white;
-      opacity: 1;
-    }
-
-    .presentation__play-icon {
-      border-left: 31px solid $color-dark;
-    }
-  }
-
   &__play-button {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 105px;
     height: 105px;
     background-color: $color-white;
     opacity: 0.5;
     border-radius: 50%;
     margin: 0 auto;
-    z-index: 3;
+    z-index: 2;
   }
 
   &__play-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: block;
     width: 0;
     height: 0;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
     border-left: 31px solid $color-white;
-    z-index: 4;
+    z-index: 3;
+  }
+
+  &__video-circle:hover {
+    .presentation__play-button {
+      background-color: $color-white;
+      opacity: 1;
+      z-index: 2;
+    }
+
+    .presentation__play-icon {
+      border-left: 31px solid $color-dark;
+      z-index: 2;
+    }
   }
 }
 
@@ -248,14 +229,14 @@
     transform: translateX(-50%);
   }
 
-  &__title_white {
+  &__title--white {
     margin: 0 auto;
     max-width: 632px;
     color: $color-white;
     margin-bottom: 26px;
   }
 
-  &__description_white {
+  &__description--white {
     max-width: 620px;
     margin: 0 auto;
     color: $color-white;
