@@ -1,6 +1,6 @@
-* {
-  outline: 1px solid red;
-}
+// * {
+//   outline: 1px solid red;
+// }
 
 html {
   height: 100%;
@@ -8,8 +8,6 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  display: flex;
-  flex-direction: column;
   font-size: 14px;
   overflow-x: hidden;
   width: 100%;
@@ -17,18 +15,19 @@ body {
 }
 
 .container {
-  padding-top: 100px;
+  @include flex;
+
   width: 100%;
   max-width: 1125px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   padding-inline: 10px;
   margin-inline: auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 
-.container--full {
-  padding: 0px;
+.container--no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 a {
@@ -40,55 +39,33 @@ a:hover {
   text-decoration: underline;
 }
 
-.button {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  font-size: 16px;
-  text-align: center;
-  position: relative;
-  display: block;
-  border: 0;
-  border-radius: 16px;
-  max-width: 265px;
-  height: 64px;
-  padding-left: 36px;
-  padding-right: 36px;
-  margin: 40px auto 0px;
-  cursor: pointer;
+.hero__button {
+  @include primary-button;
 }
 
-.button--yellow {
-  background-color: $color-yellow;
-}
-
-.button--yellow:hover {
-  background-color: $color-grey;
+.footer__button {
+  @include primary-button;
 }
 
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-top: 30px;
+  @include absolute;
 }
 
 main {
   flex: 1 0 auto;
 }
 
-.contact-info {
+.contact {
+  @include flex;
+
+  margin-top: 30px;
   position: relative;
-  display: flex;
-  justify-content: center;
   color: $color-white;
   z-index: 1;
 
   &__phone {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
+    @include absolute(0, 0, auto, auto);
+    @include flex;
   }
 
   &__number {
@@ -96,12 +73,8 @@ main {
   }
 
   &__button {
-    font-family: "Inter";
-    font-size: 14px;
     text-align: left;
     display: inline;
-    height: auto;
-    background-color: inherit;
     padding: 0px;
     margin: 0px;
     color: $color-white;
@@ -117,9 +90,7 @@ main {
   }
 
   &__company {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex;
     text-align: center;
     text-transform: uppercase;
   }
@@ -138,11 +109,9 @@ main {
   }
 
   &__mail {
-    position: absolute;
-    top: 0;
+    @include flex;
+    @include absolute(0, auto, auto, auto);
     right: 0;
-    display: flex;
-    flex-direction: column;
     margin-left: auto;
   }
 
@@ -153,8 +122,29 @@ main {
   }
 }
 
+.contact--capitalize {
+  text-transform: capitalize;
+}
+
+.contact--line {
+  border-top: 1px solid $color-line;
+}
+
 footer {
   background-color: $color-dark;
   padding-bottom: 34px;
   flex-shrink: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

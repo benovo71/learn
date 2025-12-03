@@ -1,51 +1,35 @@
 @import "variables";
+@import "mixins";
 
 h1 {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  font-weight: 800;
-  line-height: 1.2;
   font-size: 60px;
-  text-align: center;
 }
 
 h2 {
-  font-family: "RF-Dewi-Expanded", sans-serif;
   font-size: 48px;
-  line-height: 1.1;
 }
 
 h3 {
-  font-family: "RF-Dewi-Expanded", sans-serif;
   font-size: 24px;
-  font-weight: 800;
-  line-height: 1.2;
 }
 
 h4 {
-  font-family: "RF-Dewi-Expanded", sans-serif;
   font-size: 20px;
-  font-weight: 800;
-  text-align: center;
-  line-height: 1.2;
 }
 
 .section__title {
-  max-width: 800px;
-  margin: 0px auto;
-  text-align: center;
+  @include section-title($color-dark);
 }
 
 .section__description {
-  max-width: 700px;
-  text-align: center;
-  margin: 30px auto 50px;
+  @include section-description($color-dark);
 }
 
-.title--white {
-  color: $color-white;
-}
+// .title--white {
+//   color: $color-white;
+// }
 
-.description--white {
-  position: relative;
-  color: $color-white;
-}
+// .description--white {
+//   position: relative;
+//   color: $color-white;
+// }

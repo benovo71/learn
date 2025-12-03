@@ -9,25 +9,23 @@
 
   <body>
     <header class="header">
-      <div class="container container--full">
-        <div class="contact-info">
-          <div class="contact-info__phone">
-            <a class="contact-info__number" href="tel:79253431696"
-              >+79253431696</a
-            >
-            <button class="contact-info__button" aria-label="Перезвоните мне">
+      <div class="container container--no-padding">
+        <div class="contact">
+          <div class="contact__phone">
+            <a class="contact__number" href="tel:79253431696">+79253431696</a>
+            <button class="contact__button" aria-label="Перезвоните мне">
               Перезвоните мне
             </button>
           </div>
-          <div class="contact-info__company">
-            <span class="contact-info__name">Famfactory</span>
-            <span class="contact-info__description">Швейная фабрика</span>
+          <div class="contact__company">
+            <span class="contact__name">Famfactory</span>
+            <span class="contact__description">Швейная фабрика</span>
           </div>
-          <div class="contact-info__mail">
-            <a class="contact-info__email" href="mailto:mail@famfactory.ru"
+          <div class="contact__mail">
+            <a class="contact__email" href="mailto:mail@famfactory.ru"
               >Mail@famfactory.ru</a
             >
-            <span class="contact-info__email-info">Наша почта</span>
+            <span class="contact__email-info">Наша почта</span>
           </div>
         </div>
       </div>
@@ -41,11 +39,9 @@
           src="images/header.webp"
           loading="lazy"
         />
-        <div class="container container--full">
-          <h1 class="section__title title--white">
-            Сделано в Санкт-Петербурге
-          </h1>
-          <button class="button button--yellow" aria-label="Отправить запрос">
+        <div class="container container--no-padding">
+          <h1 class="hero__title">Сделано в Санкт-Петербурге</h1>
+          <button class="hero__button" aria-label="Отправить запрос">
             Отправить запрос
           </button>
         </div>
@@ -53,8 +49,8 @@
 
       <section class="catalog">
         <div class="container">
-          <h2 class="section__title">Современный мерчендайз для бизнеса</h2>
-          <div class="section__description">
+          <h2 class="catalog__title">Современный мерчендайз для бизнеса</h2>
+          <div class="catalog__description">
             Над реализацией проектов по разработке и производству одежды и
             аксессураов трудится огромная команда профессионалов, поэтому мы
             можем создавать проекты любой сложности и масштабов под ключ или
@@ -146,14 +142,16 @@
               src="images/presentation.webp"
               loading="lazy"
             />
-            <h3 class="section__title title--white">
+            <h3 class="presentation__title">
               Презентация нашей коллекции одежды 2021
             </h3>
             <div class="presentation__video-circle">
               <button
                 class="presentation__play-button"
                 aria-label="Воспроизвести"
-              ></button>
+              >
+                <span class="visually-hidden">Воспроизвести видео</span>
+              </button>
             </div>
           </div>
         </div>
@@ -161,10 +159,10 @@
 
       <section class="cooperation">
         <div class="container">
-          <h2 class="section__title">
+          <h2 class="cooperation__title">
             Производство одежды для компаний, брендов, артистов
           </h2>
-          <div class="section__description">
+          <div class="cooperation__description">
             Наша команда по разработке и производству одежды может реализовать
             проекты любой сложности, независимо от их масштаба. Мы можем взять
             на себя всю работу под ключ, или решить конкретные задачи на любом
@@ -216,7 +214,7 @@
 
       <section class="methods">
         <div class="container">
-          <h2 class="section__title">Способы нанесения принтов и вышивка</h2>
+          <h2 class="methods__title">Способы нанесения принтов и вышивка</h2>
           <div class="methods__services">
             <div class="methods__silkscreen">
               <img
@@ -254,14 +252,14 @@
 
       <section class="partner">
         <div class="container">
-          <div class="partner__background">
+          <div class="partner__bg">
             <img src="images/partner-2.webp" alt="Фото одежды" loading="lazy" />
             <img src="images/partner-1.webp" alt="Фото одежды" loading="lazy" />
             <div class="partner__info">
-              <h3 class="section__title title--white">
+              <h3 class="partner__title">
                 Если у вас есть свои товары, мы можем вам помочь реализовать их.
               </h3>
-              <div class="section__description description--white">
+              <div class="partner__description">
                 Разместим Ваши товары на сайте vsrap.com и в офлайн-магазинах
                 «VSRAP». Осуществим обработку заказов и их отправку. Каждое
                 предложение мы рассматриваем индивидуально.
@@ -273,8 +271,8 @@
 
       <section class="work">
         <div class="container">
-          <h2 class="section__title title--white">Схема работы с нами</h2>
-          <div class="section__description description--white">
+          <h2 class="work__title">Схема работы с нами</h2>
+          <div class="work__description">
             К каждому проекту мы подходим индивидуально. Свяжитесь с нами и мы
             поможем реализовать ваши идеи.
           </div>
@@ -337,11 +335,11 @@
 
       <section class="production">
         <div class="container">
-          <h2 class="section__title">
+          <h2 class="production__title">
             Все вещи мы шьём на собственном производстве в Санкт-Петербурге по
             собственному дизайну и крою
           </h2>
-          <div class="section__description">
+          <div class="production__description">
             А наши коллекции сделанные совместно с топовыми блогерами и
             артистами продаём в онлайн и через собственные розничные магазины в
             Питере и Москве.
@@ -391,10 +389,10 @@
       <section class="shops">
         <div class="container">
           <div class="shops__bg">
-            <h2 class="section__title">
+            <h2 class="shops__title">
               Магазины в самом в центре Питера и Москвы
             </h2>
-            <div class="section__description">
+            <div class="shops__description">
               Мы можем организовать реализацию вашего товара, не только в
               онлайне, но и в наших розничных магазинах.
             </div>
@@ -422,8 +420,8 @@
 
       <section class="partners">
         <div class="container">
-          <h2 class="section__title title--white">Наши коллаборации</h2>
-          <div class="section__description description--white">
+          <h2 class="partners__title">Наши коллаборации</h2>
+          <div class="partners__description">
             С нами уже самые топовые инфлюенсеры.
           </div>
           <div class="partners__gallery">
@@ -487,30 +485,30 @@
     </main>
 
     <footer>
-      <div class="container">
-        <div class="contact-info contact-info__footer">
-          <div class="contact-info__phone">
-            <a class="contact-info__number" href="tel:79253431696"
+      <div class="container container--no-padding">
+        <div class="contact">
+          <div class="contact__phone">
+            <a class="contact__number" href="tel:79253431696"
               >+7 925 343 16 96</a
             >
-            <button class="contact-info__button" aria-label="Перезвоните мне">
+            <button class="contact__button" aria-label="Перезвоните мне">
               Перезвоните мне
             </button>
           </div>
-          <div class="contact-info__company">
-            <span class="contact-info__name">Famfactory</span>
-            <span class="contact-info__description"
+          <div class="contact__company">
+            <span class="contact__name">Famfactory</span>
+            <span class="contact__description contact--capitalize"
               >Швейная фабрика в Санкт-Петербурге</span
             >
           </div>
-          <div class="contact-info__mail">
-            <a class="contact-info__email" href="mailto:mail@famfactory.ru"
+          <div class="contact__mail">
+            <a class="contact__email" href="mailto:mail@famfactory.ru"
               >Mail@famfactory.ru</a
             >
-            <span class="contact-info__email-info">Наша почта</span>
+            <span class="contact__email-info">Наша почта</span>
           </div>
         </div>
-        <button class="button button--yellow" aria-label="Отправить запрос">
+        <button class="footer__button" aria-label="Отправить запрос">
           Отправить запрос
         </button>
       </div>
