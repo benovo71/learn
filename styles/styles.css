@@ -211,18 +211,85 @@ svg * {
   font-style: normal;
   font-display: swap;
 }
-html {
-  height: 100%;
+@media (max-width: 715px) {
+  .container {
+    width: 95%;
+    margin-inline: auto;
+  }
+  button {
+    width: 100%;
+    height: auto;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .contact-info {
+    display: flex;
+  }
+  .contact-info__phone {
+    margin-top: 40px;
+  }
+  .contact-info__mail {
+    margin-top: 40px;
+    justify-self: start;
+  }
+  .cooperation__services {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+  .methods__services {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+  .partner__info {
+    width: 100%;
+    max-width: 462px;
+  }
+  .work__icon {
+    width: 50%;
+    margin-bottom: 61px;
+  }
+  .work__icon-description {
+    width: 100%;
+    min-width: 100px;
+    margin-inline: auto;
+  }
+  .production__photos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .partners__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 34px;
+  }
+  .catalog__categories {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .catalog__categories .catalog__item .catalog__item-price {
+    font-size: 14px;
+  }
+  .partners .container .partners__gallery .partners__item:first-child {
+    display: none;
+  }
+  .shops__adress-container .shops__gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .shops__adress-container .shops__gallery .shops__section-1 img {
+    border-radius: 0px;
+  }
+  .shops__adress-container .shops__gallery .shops__section-2 img {
+    border-radius: 0px 0px 14px 14px;
+  }
 }
-
-body {
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  overflow-x: hidden;
-  width: 100%;
-  height: 100%;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -240,6 +307,27 @@ body {
   padding-bottom: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -247,6 +335,14 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+* {
+  outline: 1px solid red;
+}
+
+html {
+  height: 100%;
 }
 
 .hero__button {
@@ -382,19 +478,6 @@ footer {
   flex-shrink: 0;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 h1 {
   font-size: 60px;
 }
@@ -497,11 +580,11 @@ h4 {
 }
 .catalog__item-img {
   aspect-ratio: 1;
+  border-radius: 4px;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 4px;
 }
 .catalog__item-name {
   font-size: 24px;
@@ -610,7 +693,7 @@ h4 {
 .cooperation__services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 34px;
+  gap: 25px;
 }
 .cooperation__service-title {
   font-family: "RF-Dewi-Expanded", sans-serif;
@@ -638,10 +721,11 @@ h4 {
   margin: 0 auto;
 }
 .methods__services {
-  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 37px;
+  gap: 25px;
+  margin-top: 30px;
+  gap: 25px;
 }
 .methods__img {
   height: 316px;
@@ -667,11 +751,12 @@ h4 {
   background-color: #1a1a1a;
 }
 .partner__bg {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
   margin-top: -225px;
   border-radius: 14px;
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   overflow: hidden;
 }
 .partner__bg img {
@@ -776,18 +861,18 @@ h4 {
   margin: 30px auto 50px;
   color: #1a1a1a;
 }
-.production__photos {
+.production__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 36px;
+  gap: 25px;
 }
-.production__photo {
-  border-radius: 4px;
+.production__card {
   aspect-ratio: 1;
-  -o-object-fit: cover;
-     object-fit: cover;
+  border-radius: 4px;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .shops {
@@ -813,9 +898,10 @@ h4 {
   border-radius: 14px 14px 20px 20px;
   padding-top: 100px;
 }
-.shops__gallery {
+.shops__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 0;
 }
 .shops__section-1 img {
   width: 100%;
@@ -849,17 +935,18 @@ h4 {
   margin: 30px auto 50px;
   color: #ffffff;
 }
-.partners__gallery {
+.partners__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 35px;
+  gap: 25px;
 }
-.partners__gallery img {
+.partners__cards img {
   aspect-ratio: 1;
+  border-radius: 4px;
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 4px;
 }
 
 footer .container {

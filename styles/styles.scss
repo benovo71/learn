@@ -2,6 +2,8 @@
 @import "variables";
 @import "mixins";
 @import "fonts";
+@import "utils";
+@import "globals";
 @import "basic";
 @import "titles";
 
@@ -44,9 +46,7 @@
   }
 
   &__items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    @include cards;
   }
 
   &__item {
@@ -61,11 +61,7 @@
     }
 
     &-img {
-      aspect-ratio: 1;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 4px;
+      @include card;
     }
 
     &-name {
@@ -163,9 +159,7 @@
   }
 
   &__services {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 34px;
+    @include cards;
   }
 
   &__service-title {
@@ -187,10 +181,10 @@
   }
 
   &__services {
+    @include cards(2);
     margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 37px;
+
+    gap: 25px;
   }
 
   &__img {
@@ -214,11 +208,11 @@
   background-color: $color-dark;
 
   &__bg {
+    @include cards(2, 0);
+
     margin-top: -225px;
     border-radius: 14px;
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     overflow: hidden;
 
     img {
@@ -273,7 +267,7 @@
   &__circle {
     width: 114px;
     height: 114px;
-    background-color: #222222;
+    background-color: $color-circle;
     border-radius: 50%;
     position: relative;
     display: flex;
@@ -305,18 +299,12 @@
     @include section-description($color-dark);
   }
 
-  &__photos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 36px;
+  &__cards {
+    @include cards(3);
   }
 
-  &__photo {
-    border-radius: 4px;
-    aspect-ratio: 1;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+  &__card {
+    @include card;
   }
 }
 
@@ -338,9 +326,8 @@
     padding-top: 100px;
   }
 
-  &__gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  &__cards {
+    @include cards(2, 0);
   }
   &__section-1 img {
     width: 100%;
@@ -368,16 +355,11 @@
     @include section-description($color-white);
   }
 
-  &__gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
+  &__cards {
+    @include cards(3);
 
     img {
-      aspect-ratio: 1;
-      width: 100%;
-      object-fit: cover;
-      border-radius: 4px;
+      @include card;
     }
   }
 }
@@ -388,4 +370,4 @@ footer {
   }
 }
 
-@import "media(715)";
+@import "media";

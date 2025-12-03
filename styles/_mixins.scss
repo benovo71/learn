@@ -1,6 +1,3 @@
-@mixin container {
-}
-
 @mixin absolute($top: 0, $left: 0, $width: 100%, $height: 100%) {
   position: absolute;
   top: $top;
@@ -13,6 +10,22 @@
   display: flex;
   flex-direction: $direction;
   justify-content: $justify-content;
+}
+
+@mixin section-title($color) {
+  font-family: "RF-Dewi-Expanded", sans-serif;
+  line-height: 1.1;
+  text-align: center;
+  color: $color;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@mixin section-description($color) {
+  max-width: 700px;
+  text-align: center;
+  margin: 30px auto 50px;
+  color: $color;
 }
 
 @mixin primary-button {
@@ -33,18 +46,16 @@
   }
 }
 
-@mixin section-title($color) {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  line-height: 1.1;
-  text-align: center;
-  color: $color;
-  max-width: 800px;
-  margin: 0 auto;
+@mixin cards($columns: 3, $gap: 25px) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
 }
 
-@mixin section-description($color) {
-  max-width: 700px;
-  text-align: center;
-  margin: 30px auto 50px;
-  color: $color;
+@mixin card {
+  aspect-ratio: 1;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

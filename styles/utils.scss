@@ -1,0 +1,32 @@
+@import "variables";
+@import "mixins";
+@import "media";
+
+.container {
+  @include flex;
+
+  width: 100%;
+  max-width: 1125px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-inline: 10px;
+  margin-inline: auto;
+}
+
+.container--no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

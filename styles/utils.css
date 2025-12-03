@@ -1,0 +1,108 @@
+@media (max-width: 715px) {
+  .container {
+    width: 95%;
+    margin-inline: auto;
+  }
+  button {
+    width: 100%;
+    height: auto;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .contact-info {
+    display: flex;
+  }
+  .contact-info__phone {
+    margin-top: 40px;
+  }
+  .contact-info__mail {
+    margin-top: 40px;
+    justify-self: start;
+  }
+  .cooperation__services {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+  .methods__services {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+  .partner__info {
+    width: 100%;
+    max-width: 462px;
+  }
+  .work__icon {
+    width: 50%;
+    margin-bottom: 61px;
+  }
+  .work__icon-description {
+    width: 100%;
+    min-width: 100px;
+    margin-inline: auto;
+  }
+  .production__photos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .partners__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 34px;
+  }
+  .catalog__categories {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .catalog__categories .catalog__item .catalog__item-price {
+    font-size: 14px;
+  }
+  .partners .container .partners__gallery .partners__item:first-child {
+    display: none;
+  }
+  .shops__adress-container .shops__gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .shops__adress-container .shops__gallery .shops__section-1 img {
+    border-radius: 0px;
+  }
+  .shops__adress-container .shops__gallery .shops__section-2 img {
+    border-radius: 0px 0px 14px 14px;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 1125px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-inline: 10px;
+  margin-inline: auto;
+}
+
+.container--no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}/*# sourceMappingURL=utils.css.map */
