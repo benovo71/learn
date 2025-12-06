@@ -15,6 +15,7 @@ html {
 }
 
 .header {
+  padding-top: 30px;
   @include absolute;
 }
 
@@ -23,15 +24,13 @@ main {
 }
 
 .contact {
-  @include flex;
+  @include flex(row, space-between);
 
-  margin-top: 30px;
   position: relative;
   color: $color-white;
   z-index: 1;
 
   &__phone {
-    @include absolute(0, 0, auto, auto);
     @include flex;
   }
 
@@ -58,6 +57,10 @@ main {
 
   &__company {
     @include flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     text-transform: uppercase;
   }
@@ -77,9 +80,6 @@ main {
 
   &__mail {
     @include flex;
-    @include absolute(0, auto, auto, auto);
-    right: 0;
-    margin-left: auto;
   }
 
   &__email {
@@ -87,18 +87,17 @@ main {
     display: block;
     text-transform: uppercase;
   }
+
+  &--foter {
+    margin-top: 30px;
+  }
 }
 
 .contact--capitalize {
   text-transform: capitalize;
 }
 
-.contact--line {
-  border-top: 1px solid $color-line;
-}
-
 footer {
   background-color: $color-dark;
-  padding-bottom: 34px;
   flex-shrink: 0;
 }

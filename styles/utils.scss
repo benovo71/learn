@@ -11,13 +11,16 @@
   padding-bottom: 50px;
   padding-inline: 10px;
   margin-inline: auto;
+
+  &--no-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
-.container--no-padding {
-  padding-top: 0;
-  padding-bottom: 0;
+.wrapper--line {
+  border: 1px solid $color-line;
 }
-
 .visually-hidden {
   position: absolute;
   width: 1px;

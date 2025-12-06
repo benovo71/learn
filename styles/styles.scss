@@ -46,7 +46,7 @@
   }
 
   &__items {
-    @include cards;
+    @include items;
   }
 
   &__item {
@@ -61,7 +61,7 @@
     }
 
     &-img {
-      @include card;
+      @include item;
     }
 
     &-name {
@@ -158,8 +158,14 @@
     @include section-description($color-dark);
   }
 
-  &__services {
-    @include cards;
+  &__items {
+    @include items;
+  }
+
+  &__item {
+    img {
+      @include item(auto);
+    }
   }
 
   &__service-title {
@@ -180,17 +186,17 @@
     @include section-title($color-dark);
   }
 
-  &__services {
-    @include cards(2);
-    margin-top: 30px;
+  &__items {
+    @include items(2);
 
+    margin-top: 30px;
     gap: 25px;
   }
 
-  &__img {
-    height: 316px;
-    width: 100%;
-    object-fit: cover;
+  &__item {
+    img {
+      @include item(auto);
+    }
   }
 
   &__title {
@@ -208,7 +214,7 @@
   background-color: $color-dark;
 
   &__bg {
-    @include cards(2, 0);
+    @include items(2, 0);
 
     margin-top: -225px;
     border-radius: 14px;
@@ -299,12 +305,12 @@
     @include section-description($color-dark);
   }
 
-  &__cards {
-    @include cards(3);
+  &__items {
+    @include items(3);
   }
 
-  &__card {
-    @include card;
+  &__item {
+    @include item;
   }
 }
 
@@ -326,14 +332,27 @@
     padding-top: 100px;
   }
 
-  &__cards {
-    @include cards(2, 0);
+  &__items {
+    @include items(2, 0);
   }
-  &__section-1 img {
-    width: 100%;
-    height: 472px;
-    object-fit: cover;
-    border-radius: 0px 0px 0px 14px;
+  &__section-1 {
+    position: relative;
+
+    & img {
+      width: 100%;
+      height: 472px;
+      object-fit: cover;
+      border-radius: 0px 0px 0px 14px;
+    }
+  }
+
+  &--white {
+    @include section-title($color-white);
+    position: absolute;
+    left: 27px;
+    bottom: 50px;
+    max-width: clamp(280px, 70vw, 315px);
+    text-align: left;
   }
 
   &__section-2 img {
@@ -343,7 +362,6 @@
     border-radius: 0px 0px 14px 0px;
   }
 }
-
 .partners {
   background-color: $color-dark;
 
@@ -355,18 +373,12 @@
     @include section-description($color-white);
   }
 
-  &__cards {
-    @include cards(3);
+  &__items {
+    @include items(3);
 
     img {
-      @include card;
+      @include item;
     }
-  }
-}
-
-footer {
-  .container {
-    border-top: 1px solid $color-line;
   }
 }
 
