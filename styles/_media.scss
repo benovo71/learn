@@ -1,4 +1,4 @@
-@media (max-width: 715px) {
+@media (max-width: 810px) {
   h1 {
     font-size: 35px;
   }
@@ -7,13 +7,26 @@
     font-size: 30px;
   }
 
-  button {
-    width: 100%;
-    height: auto;
-    padding-left: 36px;
-    padding-right: 36px;
-    padding-top: 17px;
-    padding-bottom: 17px;
+  .contact {
+    margin-top: 550px;
+
+    &__company {
+      top: 50px;
+    }
+
+    &--footer {
+      padding-top: 170px;
+      margin-top: 0;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    &--center {
+      text-align: center;
+    }
   }
 
   .cooperation__items {
@@ -44,34 +57,65 @@
   }
 
   .partners {
-    &__gallery {
+    &__items {
       @include items(2);
     }
-  }
-  .catalog__items {
-    @include items(2);
-  }
 
-  .catalog__item {
-    &-price {
-      font-size: 14px;
+    &__item:first-child {
+      display: none;
     }
   }
 
-  .partners__items:first-child {
-    display: none;
+  .catalog {
+    &__items {
+      @include items(2);
+    }
+
+    &__item {
+      &-price {
+        font-size: 14px;
+      }
+    }
   }
 
   .shops {
     &__items {
-      display: grid;
       grid-template-columns: repeat(1, 1fr);
     }
 
     &__section-1 img {
+      border-radius: 0;
     }
 
     &__section-2 img {
+      border-radius: 0px 0px 14px 14px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .catalog {
+    &__items {
+      @include items(1);
+    }
+  }
+  .contact {
+    @include flex(column, center);
+    margin-top: 450px;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+
+    &--footer {
+      margin-top: 0;
     }
   }
 }

@@ -3,6 +3,7 @@
 @import "media";
 
 .container {
+  position: relative;
   @include flex;
 
   width: 100%;
@@ -20,7 +21,9 @@
 
 .wrapper--line {
   border: 1px solid $color-line;
+  position: relative;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;

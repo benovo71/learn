@@ -1,22 +1,37 @@
-* {
-  outline: 1px solid red;
-}
-
 html {
   height: 100%;
 }
 
-.hero__button {
-  @include primary-button;
+h1 {
+  font-size: 60px;
 }
 
-.footer__button {
-  @include primary-button;
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+.section__title {
+  @include section-title($color-dark);
+}
+
+.section__description {
+  @include section-description($color-dark);
 }
 
 .header {
-  padding-top: 30px;
-  @include absolute;
+  @include absolute(0, 0, 100%, 0);
+}
+
+.hero .footer__button {
+  @include primary-button;
 }
 
 main {
@@ -26,7 +41,6 @@ main {
 .contact {
   @include flex(row, space-between);
 
-  position: relative;
   color: $color-white;
   z-index: 1;
 
@@ -59,8 +73,7 @@ main {
     @include flex;
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     text-align: center;
     text-transform: uppercase;
   }
@@ -71,7 +84,7 @@ main {
   }
 
   &__description {
-    font-family: "RF-Dewi-regular", sans-serif;
+    font-family: "RF-Dewi-Expanded", sans-serif;
     font-size: 16px;
     letter-spacing: 0;
     line-height: 1.5;
@@ -88,8 +101,8 @@ main {
     text-transform: uppercase;
   }
 
-  &--foter {
-    margin-top: 30px;
+  &--footer {
+    padding-top: 30px;
   }
 }
 
@@ -100,4 +113,8 @@ main {
 footer {
   background-color: $color-dark;
   flex-shrink: 0;
+}
+
+.footer__button {
+  @include primary-button;
 }

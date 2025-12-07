@@ -1,17 +1,27 @@
-@media (max-width: 715px) {
+@media (max-width: 810px) {
   h1 {
     font-size: 35px;
   }
   h2 {
     font-size: 30px;
   }
-  button {
-    width: 100%;
-    height: auto;
-    padding-left: 36px;
-    padding-right: 36px;
-    padding-top: 17px;
-    padding-bottom: 17px;
+  .contact {
+    margin-top: 550px;
+  }
+  .contact__company {
+    top: 50px;
+  }
+  .contact--footer {
+    padding-top: 170px;
+    margin-top: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .contact--center {
+    text-align: center;
   }
   .cooperation__items {
     display: grid;
@@ -44,10 +54,13 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
-  .partners__gallery {
+  .partners__items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
+  }
+  .partners__item:first-child {
+    display: none;
   }
   .catalog__items {
     display: grid;
@@ -57,15 +70,43 @@
   .catalog__item-price {
     font-size: 14px;
   }
-  .partners__items:first-child {
-    display: none;
-  }
   .shops__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .shops__section-1 img {
+    border-radius: 0;
+  }
+  .shops__section-2 img {
+    border-radius: 0px 0px 14px 14px;
+  }
+}
+@media (max-width: 400px) {
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .catalog__items {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 450px;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+  .contact--footer {
+    margin-top: 0;
   }
 }
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -83,6 +124,7 @@
 
 .wrapper--line {
   border: 1px solid #2c2c2c;
+  position: relative;
 }
 
 .visually-hidden {

@@ -53,9 +53,16 @@
 }
 
 @mixin item($height: 100%) {
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
   border-radius: 4px;
-  width: 100%;
+  width: 1000px;
   height: $height;
   object-fit: cover;
+  transition: opacity 0.2s ease;
+  display: block;
+}
+
+@mixin img-hover {
+  opacity: 0.85;
+  cursor: pointer;
 }
