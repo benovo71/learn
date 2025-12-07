@@ -311,7 +311,6 @@ svg * {
     justify-content: center;
     margin-top: 450px;
     align-items: center;
-    gap: 15px;
     text-align: center;
   }
   .contact--footer {
@@ -329,10 +328,6 @@ svg * {
   padding-bottom: 50px;
   padding-inline: 10px;
   margin-inline: auto;
-}
-.container--no-padding {
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
 .wrapper--line {
@@ -1139,7 +1134,6 @@ footer {
     justify-content: center;
     margin-top: 450px;
     align-items: center;
-    gap: 15px;
     text-align: center;
   }
   .contact--footer {
