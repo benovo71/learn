@@ -12,40 +12,6 @@
   justify-content: $justify-content;
 }
 
-@mixin section-title($color) {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  line-height: 1.1;
-  text-align: center;
-  color: $color;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-@mixin section-description($color) {
-  max-width: 700px;
-  text-align: center;
-  margin: 30px auto 50px;
-  color: $color;
-}
-
-@mixin primary-button {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  font-size: 16px;
-  display: block;
-  border: 0;
-  border-radius: 16px;
-  background-color: $color-yellow;
-  max-width: 265px;
-  height: 64px;
-  padding: 0 36px;
-  margin: 40px auto 0;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $color-grey;
-  }
-}
-
 @mixin items($columns: 3, $gap: 25px) {
   display: grid;
   grid-template-columns: repeat($columns, 1fr);
@@ -65,4 +31,21 @@
 @mixin img-hover {
   opacity: 0.85;
   cursor: pointer;
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin hover-img {
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.85;
+      cursor: pointer;
+    }
+  }
 }

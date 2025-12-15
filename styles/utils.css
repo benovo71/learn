@@ -1,9 +1,15 @@
-@media (max-width: 810px) {
+@media (max-width: 827px) {
   h1 {
     font-size: 35px;
   }
   h2 {
     font-size: 30px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
   }
   .contact {
     margin-top: 550px;
@@ -80,7 +86,7 @@
     border-radius: 0px 0px 14px 14px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   h1 {
     font-size: 25px;
   }

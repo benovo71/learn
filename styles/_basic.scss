@@ -18,20 +18,26 @@ h4 {
   font-size: 20px;
 }
 
-.section__title {
-  @include section-title($color-dark);
-}
+.button {
+  font-family: "RF-Dewi-Expanded", sans-serif;
+  font-size: 16px;
+  display: block;
+  border: 0;
+  border-radius: 16px;
+  background-color: $color-yellow;
+  max-width: 265px;
+  height: 64px;
+  padding: 0 36px;
+  margin: 40px auto 0;
+  cursor: pointer;
 
-.section__description {
-  @include section-description($color-dark);
+  @include hover {
+    background-color: $color-grey;
+  }
 }
 
 .header {
   @include absolute(0, 0, 100%, 0);
-}
-
-.hero .footer__button {
-  @include primary-button;
 }
 
 main {
@@ -63,10 +69,10 @@ main {
     background-color: transparent;
     border: none;
     outline: none;
-  }
 
-  &__button:hover {
-    text-decoration: underline;
+    @include hover {
+      text-decoration: underline;
+    }
   }
 
   &__company {
@@ -113,8 +119,4 @@ main {
 footer {
   background-color: $color-dark;
   flex-shrink: 0;
-}
-
-.footer__button {
-  @include primary-button;
 }

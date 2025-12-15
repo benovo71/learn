@@ -211,12 +211,18 @@ svg * {
   font-style: normal;
   font-display: swap;
 }
-@media (max-width: 810px) {
+@media (max-width: 827px) {
   h1 {
     font-size: 35px;
   }
   h2 {
     font-size: 30px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
   }
   .contact {
     margin-top: 550px;
@@ -293,7 +299,7 @@ svg * {
     border-radius: 0px 0px 14px 14px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   h1 {
     font-size: 25px;
   }
@@ -388,31 +394,7 @@ h4 {
   font-size: 20px;
 }
 
-.section__title {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  line-height: 1.1;
-  text-align: center;
-  color: #1a1a1a;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.section__description {
-  max-width: 700px;
-  text-align: center;
-  margin: 30px auto 50px;
-  color: #1a1a1a;
-}
-
-.header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-}
-
-.hero .footer__button {
+.button {
   font-family: "RF-Dewi-Expanded", sans-serif;
   font-size: 16px;
   display: block;
@@ -425,8 +407,18 @@ h4 {
   margin: 40px auto 0;
   cursor: pointer;
 }
-.hero .footer__button:hover {
-  background-color: #eeeeee;
+@media (hover: hover) {
+  .button:hover {
+    background-color: #eeeeee;
+  }
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
 }
 
 main {
@@ -460,8 +452,10 @@ main {
   border: none;
   outline: none;
 }
-.contact__button:hover {
-  text-decoration: underline;
+@media (hover: hover) {
+  .contact__button:hover {
+    text-decoration: underline;
+  }
 }
 .contact__company {
   display: flex;
@@ -507,43 +501,36 @@ footer {
   flex-shrink: 0;
 }
 
-.footer__button {
+.section__title {
   font-family: "RF-Dewi-Expanded", sans-serif;
-  font-size: 16px;
-  display: block;
-  border: 0;
-  border-radius: 16px;
-  background-color: #f4df74;
-  max-width: 265px;
-  height: 64px;
-  padding: 0 36px;
-  margin: 40px auto 0;
-  cursor: pointer;
+  line-height: 1.1;
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto 34px;
+  padding-inline: 10px;
+  color: #1a1a1a;
 }
-.footer__button:hover {
-  background-color: #eeeeee;
+.section__title--white {
+  color: #ffffff;
+}
+.section__title span {
+  display: block;
+}
+
+.section__description {
+  max-width: 700px;
+  text-align: center;
+  margin: 0px auto 50px;
+  padding-inline: 10px;
+}
+.section__description--white {
+  color: #ffffff;
 }
 
 .hero {
   position: relative;
   padding-top: 200px;
   padding-bottom: 200px;
-}
-.hero__button {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  font-size: 16px;
-  display: block;
-  border: 0;
-  border-radius: 16px;
-  background-color: #f4df74;
-  max-width: 265px;
-  height: 64px;
-  padding: 0 36px;
-  margin: 40px auto 0;
-  cursor: pointer;
-}
-.hero__button:hover {
-  background-color: #eeeeee;
 }
 .hero__img {
   position: absolute;
@@ -555,17 +542,6 @@ footer {
   object-fit: cover;
   object-position: center;
   z-index: -2;
-}
-.hero__title {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  line-height: 1.1;
-  text-align: center;
-  color: #ffffff;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.hero__title span {
-  display: block;
 }
 .hero::before {
   content: "";
@@ -581,20 +557,6 @@ footer {
 
 .catalog {
   padding-bottom: 275px;
-}
-.catalog__title {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  line-height: 1.1;
-  text-align: center;
-  color: #1a1a1a;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.catalog__description {
-  max-width: 700px;
-  text-align: center;
-  margin: 30px auto 50px;
-  color: #1a1a1a;
 }
 .catalog__items {
   display: grid;
@@ -619,9 +581,11 @@ footer {
   display: block;
   flex-grow: 1;
 }
-.catalog__item-img:hover {
-  opacity: 0.85;
-  cursor: pointer;
+@media (hover: hover) {
+  .catalog__item-img:hover {
+    opacity: 0.85;
+    cursor: pointer;
+  }
 }
 .catalog__item-name {
   font-size: 24px;
@@ -663,18 +627,18 @@ footer {
   opacity: 0.6;
   z-index: -1;
 }
-.presentation__title {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  line-height: 1.1;
-  text-align: center;
-  color: #ffffff;
-  max-width: 800px;
-  margin: 0 auto;
-  max-width: 384px;
-}
 .presentation__video-circle {
   cursor: pointer;
   margin: 20px auto 0;
+}
+@media (hover: hover) {
+  .presentation__video-circle:hover .presentation__play-button {
+    opacity: 1;
+    background-color: #ffffff;
+  }
+  .presentation__video-circle:hover .presentation__play-button::before {
+    border-left-color: #1a1a1a;
+  }
 }
 .presentation__play-button {
   position: relative;
@@ -687,6 +651,7 @@ footer {
   opacity: 0.8;
   border-radius: 50%;
   border: 0;
+  transition: opacity 0.2s, background-color 0.2s;
 }
 .presentation__play-button::before {
   position: absolute;
@@ -701,31 +666,9 @@ footer {
   opacity: 1;
   margin-left: 5px;
 }
-.presentation__video-circle:hover .presentation__play-button {
-  opacity: 1;
-  background-color: #ffffff;
-}
-.presentation__video-circle:hover .presentation__play-button::before {
-  border-left-color: #1a1a1a;
-}
 
 .cooperation {
-  padding-bottom: 100px;
   background-color: #eeeeee;
-}
-.cooperation__title {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  line-height: 1.1;
-  text-align: center;
-  color: #1a1a1a;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.cooperation__description {
-  max-width: 700px;
-  text-align: center;
-  margin: 30px auto 50px;
-  color: #1a1a1a;
 }
 .cooperation__items {
   display: grid;
@@ -740,31 +683,11 @@ footer {
   object-fit: cover;
   transition: opacity 0.2s ease;
   display: block;
-}
-.cooperation__service-title {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  line-height: 1.1;
-  text-align: center;
-  color: #1a1a1a;
-  max-width: 800px;
-  margin: 0 auto;
-  margin-top: 34px;
-  margin-bottom: 25px;
-}
-.cooperation__service-description {
-  text-align: center;
+  margin-bottom: 30px;
 }
 
 .methods {
   padding-bottom: 300px;
-}
-.methods__title {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  line-height: 1.1;
-  text-align: center;
-  color: #1a1a1a;
-  max-width: 800px;
-  margin: 0 auto;
 }
 .methods__items {
   display: grid;
@@ -781,19 +704,7 @@ footer {
   object-fit: cover;
   transition: opacity 0.2s ease;
   display: block;
-}
-.methods__title {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  line-height: 1.1;
-  text-align: center;
-  color: #1a1a1a;
-  max-width: 800px;
-  margin: 0 auto;
-  margin-top: 40px;
-  margin-bottom: 23px;
-}
-.methods__description {
-  text-align: center;
+  margin-bottom: 30px;
 }
 
 .partner {
@@ -832,39 +743,10 @@ footer {
   margin-top: 50px;
   z-index: 1;
 }
-.partner__title {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  line-height: 1.1;
-  text-align: center;
-  color: #ffffff;
-  max-width: 800px;
-  margin: 0 auto;
-  max-width: 632px;
-}
-.partner__description {
-  max-width: 700px;
-  text-align: center;
-  margin: 30px auto 50px;
-  color: #ffffff;
-}
 
 .work {
   background-color: #1a1a1a;
   padding-bottom: 130px;
-}
-.work__title {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  line-height: 1.1;
-  text-align: center;
-  color: #ffffff;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.work__description {
-  max-width: 700px;
-  text-align: center;
-  margin: 30px auto 50px;
-  color: #ffffff;
 }
 .work__icons {
   display: flex;
@@ -896,21 +778,6 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-.production__title {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  line-height: 1.1;
-  text-align: center;
-  color: #1a1a1a;
-  max-width: 800px;
-  margin: 0 auto;
-  max-width: 100%;
-}
-.production__description {
-  max-width: 700px;
-  text-align: center;
-  margin: 30px auto 50px;
-  color: #1a1a1a;
-}
 .production__items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -925,27 +792,15 @@ footer {
   transition: opacity 0.2s ease;
   display: block;
 }
-.production__item:hover {
-  opacity: 0.85;
-  cursor: pointer;
+@media (hover: hover) {
+  .production__item:hover {
+    opacity: 0.85;
+    cursor: pointer;
+  }
 }
 
 .shops {
   background-color: #1a1a1a;
-}
-.shops__title {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  line-height: 1.1;
-  text-align: center;
-  color: #1a1a1a;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.shops__description {
-  max-width: 700px;
-  text-align: center;
-  margin: 30px auto 50px;
-  color: #1a1a1a;
 }
 .shops__bg {
   margin-top: -225px;
@@ -985,35 +840,16 @@ footer {
   border-radius: 0px 0px 14px 0px;
 }
 .shops--white {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  line-height: 1.1;
-  text-align: center;
   color: #ffffff;
-  max-width: 800px;
-  margin: 0 auto;
   position: absolute;
   left: 27px;
-  bottom: 50px;
+  bottom: 25px;
   max-width: clamp(280px, 70vw, 315px);
   text-align: left;
 }
 
 .partners {
   background-color: #1a1a1a;
-}
-.partners__title {
-  font-family: "RF-Dewi-Expanded", sans-serif;
-  line-height: 1.1;
-  text-align: center;
-  color: #ffffff;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.partners__description {
-  max-width: 700px;
-  text-align: center;
-  margin: 30px auto 50px;
-  color: #ffffff;
 }
 .partners__items {
   display: grid;
@@ -1029,17 +865,25 @@ footer {
   transition: opacity 0.2s ease;
   display: block;
 }
-.partners__items img:hover {
-  opacity: 0.85;
-  cursor: pointer;
+@media (hover: hover) {
+  .partners__items img:hover {
+    opacity: 0.85;
+    cursor: pointer;
+  }
 }
 
-@media (max-width: 810px) {
+@media (max-width: 827px) {
   h1 {
     font-size: 35px;
   }
   h2 {
     font-size: 30px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
   }
   .contact {
     margin-top: 550px;
@@ -1116,7 +960,7 @@ footer {
     border-radius: 0px 0px 14px 14px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   h1 {
     font-size: 25px;
   }
